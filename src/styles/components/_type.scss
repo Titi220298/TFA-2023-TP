@@ -1,10 +1,121 @@
+
+li{
+  list-style: none;
+}
+
+
+
 body {
-  font-family: sans-serif;
-  font-size: $size-text;
-  line-height: 1.5;
-  color: $c-text;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--color-blanc);
+  background-color: var(--color-noir);
 }
 
 .title {
-  color: red;
+  font-size: 50px;
+  line-height: 1.20;
+  color: var(--color-blanc);
+  font-family: 'Brygada 1918', serif;
+  font-weight: 600;
+
+  &--2{
+    font-size: 40px;
+    line-height: 1.30;
+    font-weight: 400;
+  }
+
+  &--3{
+    font-family: 'Manrope', sans-serif;
+    font-size: 31px;
+    line-height: 1.30;
+    font-weight: 400;
+  }
+
+  &--4{
+    font-size: 25px;
+    line-height: 1.30;
+    font-weight: 400;
+  }
+
+  &--5{
+    font-size: 20px;
+    line-height: 1.30;
+    font-weight: 400;
+  }
+  
+  &--6{
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+    line-height: 1.30;
+    font-weight: 400;
+  }
+}
+
+
+@media (min-width: 600px){
+
+
+}
+
+@media (min-width: 1024px){
+
+  body {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.4;
+    color: var(--color-blanc);
+    background-color: var(--color-noir);
+  }
+
+  .title {
+    font-size: 150px;
+    line-height: 1.20;
+    color: var(--color-blanc);
+    font-family: 'Brygada 1918', serif;
+    font-weight: 600;
+    padding: 50px 0 50px 0;
+  
+    &--2{
+      font-size: 100px;
+      line-height: 1.30;
+    }
+  
+    &--3{
+      font-family: 'Manrope', sans-serif;
+      font-size: 50px;
+      line-height: 1.30;
+    }
+  
+    &--4{
+      font-size: 40px;
+      line-height: 1.30;
+      padding: 0px 0px 0px 0px;
+    }
+  
+    &--5{
+      font-size: 31px;
+      line-height: 1.30;
+    }
+    
+    &--6{
+      font-family: 'Manrope', sans-serif;
+      font-size: 25px;
+      line-height: 1.30;
+    }
+  }
+
+  .text-nav a{
+    text-decoration: none;
+    color: var(--color-beige);
+    list-style: none;
+    font-weight: 400;
+    margin: 0px 0px 0px 25px;
+
+  }
+
+
 }

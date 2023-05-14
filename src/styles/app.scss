@@ -1,3 +1,55 @@
 @import 'utils/variables';
 @import 'components/type';
 @import '../../node_modules/modern-normalize/modern-normalize';
+
+@import 'components/container';
+/* Theme */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+[data-theme="ligth"]{
+    --color-blanc: rgb(255, 255, 255);
+    --color-noir: rgb(27, 27, 27);
+    --color-vert: #1C5F3E;
+    --color-beige: #EEE0D3;
+    --color-rouille: #CB6E4F;
+}
+[data-theme="dark"]{
+    --color-blanc: rgb(27, 27, 27);
+    --color-noir: rgb(255, 255, 255);
+    --color-vert: #1C5F3E;
+    --color-beige: #EEE0D3;
+    --color-rouille: #CB6E4F;
+}
+.darkmode{
+    cursor: pointer;
+    background-color: var(--color-blanc);
+    margin-top: 32px;
+}
+
+.container--darkmode{
+    display: flex;
+    justify-content: end;
+}
+
+
+
+@media (min-width: 1024px){
+
+
+
+    .img-background{
+        padding: 200px 0 200px 0;
+    
+        width: 100vw;
+        height: 150vh;
+        background-image: url("../assets/images/img-rue.jpg");
+    
+        background-position: top;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}

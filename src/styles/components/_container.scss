@@ -1,0 +1,36 @@
+
+
+.container{
+    
+}
+
+.container_el{
+    margin: 0px 25px 0px 25px;
+
+}
+
+@media (min-width: 1024px){
+
+    .container-nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 100px 0px 100px;
+        width: 100vw;
+        height: 80px;
+        background-color: var(--color-vert);
+        position: fixed;
+    }
+
+    .container-nav_el{
+        display: flex;
+        flex-direction: row;
+        
+
+    }
+
+    .container_el{
+        margin: 0px 200px 0px 100px;
+    
+    }
+}
