@@ -3,6 +3,7 @@
 @import '../../node_modules/modern-normalize/modern-normalize';
 
 @import 'components/container';
+@import 'components/Button';
 /* Theme */
 
 *{
@@ -37,19 +38,40 @@
 
 
 
+.block1{
+
+    background-image: url("../assets/images/el-graphic-white.png");
+    background-position: top -250px right -200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    margin-top: 50px;
+    max-width: 500px;
+    padding: 20px 25px 20px 25px;
+    background-color: var(--color-vert);
+    border-radius: 15px;
+
+}
+
+
+
+
 @media (min-width: 1024px){
 
+    .block1{
 
-
-    .img-background{
-        padding: 200px 0 200px 0;
-    
-        width: 100vw;
-        height: 150vh;
-        background-image: url("../assets/images/img-rue.jpg");
-    
-        background-position: top;
+        background-image: url("../assets/images/el-graphic-white.png");
+        background-position: top -250px right -200px;
         background-size: contain;
         background-repeat: no-repeat;
+    
+        margin-top: 100px;
+        max-width: 500px;
+        padding: 40px 50px 40px 50px;
+        background-color: var(--color-vert);
+        border-radius: 30px;
+    
     }
+
+    
 }

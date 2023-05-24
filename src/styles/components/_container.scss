@@ -1,10 +1,41 @@
 
 
-.container{
-    
+.container-nav{
+    display: flex;
+    align-items: center;
+    padding: 0px 25px 0px 25px;
+    width: 100vw;
+    height: 80px;
+    background-color: var(--color-vert);
+    position: fixed;
 }
 
-.container_el{
+.container-nav__el{
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    margin: 0px 25px 0px 25px;
+}
+
+.container__el{
+    margin: 0px 25px 0px 25px;
+}
+
+.container-titre{
+    padding: 100px 0 100px 0;
+
+    width: 100vw;
+    height: 110vh;
+    background-image: url("../assets/images/img-rue.jpg");
+
+    background-position: top 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.container-titre__el{
     margin: 0px 25px 0px 25px;
 
 }
@@ -22,15 +53,35 @@
         position: fixed;
     }
 
-    .container-nav_el{
+    .container-nav__el{
         display: flex;
         flex-direction: row;
-        
-
     }
 
-    .container_el{
-        margin: 0px 200px 0px 100px;
+    .container{
+        margin: 0 100px 0 100px;
+    }
+
+    .container__el{
+        margin: 0 120px 0 120px;
+    }
+
+    .container-titre{
+        
+        margin-bottom: 200px; 
+        padding: 200px 0 0px 0;
+        width: 100vw;
+        height: 150vh;
+        background-image: url("../assets/images/img-rue.jpg");
+    
+        
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .container-titre__el{
+        margin: auto auto auto 100px;
+        max-width: 70vw;
     
     }
 }
