@@ -20,15 +20,30 @@ body {
   color: var(--color-blanc);
   font-family: 'Brygada 1918', serif;
   font-weight: 600;
+  padding: 50px 0 50px 0;
+
+  &--right{
+    text-align: right;
+
+  }
+
+  &--marginbottom{
+    margin-bottom: 30px;
+  }
 
   &--beige{
     color: var(--color-beige);
+  }
+
+  &--vert{
+    color: var(--color-vert);
   }
 
   &--2{
     font-size: 40px;
     line-height: 1.30;
     font-weight: 400;
+    padding: 0;
   }
 
   &--3{
@@ -36,12 +51,15 @@ body {
     font-size: 31px;
     line-height: 1.30;
     font-weight: 400;
+    padding: 0;
+    padding-top: 12px;
   }
 
   &--4{
     font-size: 25px;
     line-height: 1.30;
     font-weight: 400;
+    padding: 0;
   }
 
   &--5{
@@ -67,14 +85,36 @@ body {
 
 }
 
-.text-dim-rencontre{
+.text--dim-rencontre{
   max-width: 385px;
+}
+
+.text-spc{
+  display: block;
+  font-size: 60px;
+  color: var(--color-vert);
+  font-family: 'Brygada 1918', serif;
+  font-weight: 600;
+  margin-bottom: -26px;
+  margin-top: 10px;
+
+  &--2{
+    font-size: 80px;
+    margin-left: -30px;
+    margin-top: 13px;
+    position: absolute;
+    rotate: (90deg);
+  }
 }
 
 
 p{
-  padding-top: 31px;
+  padding-top: 20px;
   font-weight: 400;
+}
+
+.text--black{
+  color: var(--color-noir);
 }
 
 
@@ -101,10 +141,6 @@ p{
     font-family: 'Brygada 1918', serif;
     font-weight: 600;
     padding: 50px 0 50px 0;
-
-    &--beige{
-      color: var(--color-beige);
-    }
   
     &--2{
       font-size: 100px;

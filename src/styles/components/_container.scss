@@ -16,7 +16,7 @@
 }
 
 .container{
-    margin: 0px 25px 0px 25px;
+    margin: 0px 25px 100px 25px;
 }
 
 .container__el{
@@ -24,14 +24,15 @@
 }
 
 .container-titre{
-    padding: 100px 0 100px 0;
+    box-sizing: border-box;
+    padding: 150px 0 0px 0;
+    margin-bottom: 100px; 
 
     width: 100vw;
-    height: 110vh;
     background-image: url("../assets/images/img-rue.jpg");
 
-    background-position: top 100px;
-    background-size: contain;
+    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 

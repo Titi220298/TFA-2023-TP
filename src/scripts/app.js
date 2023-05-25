@@ -1,10 +1,47 @@
 console.info('Hello world');
 
 import { gsap } from "gsap";
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
+gsap.registerPlugin(ScrollTrigger);
 
 
 //gsap.to("H1", {duration: 2, x: 200} );
+
+
+
+// Sélection du conteneur du texte
+const textContainer = document.getElementById('text-container');
+const textList = document.getElementById('text-list');
+const texts = textList.getElementsByClassName('list__el');
+
+// Calcul de la largeur totale du texte
+let totalWidth = 0;
+for (let i = 0; i < texts.length; i++) {
+  totalWidth += texts[i].offsetWidth;
+}
+
+totalWidth -= textContainer.offsetWidth;
+
+// Configuration de l'animation
+const animation = gsap.timeline({ repeat: -1, paused: true});
+animation.to(textList, { x: -totalWidth, duration: 10, ease: 'none'})
+         .to(textList, { x: 0, duration: 0 });
+
+// Lancement de l'animation
+animation.play();
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //Dark Mode

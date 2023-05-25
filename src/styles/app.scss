@@ -36,12 +36,31 @@
     justify-content: end;
 }
 
+.img{
+    width: 70px;
+    margin-top: 16px;
 
+    &--margin{
+        margin-right: 16px;
+    }
+}
 
-.block1{
+.block-img{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &--end{
+        justify-content: end;
+        row-gap: 20px;
+    }
+
+}
+
+.block{
 
     background-image: url("../assets/images/el-graphic-white.png");
-    background-position: top -250px right -200px;
+    background-position: top -140px right -120px;
     background-size: contain;
     background-repeat: no-repeat;
 
@@ -51,6 +70,52 @@
     background-color: var(--color-vert);
     border-radius: 15px;
 
+    &--2{
+
+        background-image: url("../assets/images/el-graphic-green.png");
+        background-position: top -50px left 50px;
+        background-size: cover;
+
+        background-color: var(--color-beige);
+    }
+
+    &--3{
+
+        display: flex;
+        flex-direction: column;
+        background-image: url("../assets/images/el-graphic-green.png");
+        background-position: top -50px left 50px;
+        background-size: cover;
+
+        background-color: var(--color-beige);
+    }
+
+}
+
+
+
+#text-container{
+    overflow: hidden;
+}
+
+.list{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    margin-top: 41px;
+    
+
+    &__el{
+        position: relative;
+        min-width: 400px;
+        display: flex;
+        margin-right: 20px;
+        background-color: var(--color-vert);
+        border-radius: 60px;
+        padding: 20px 32px 20px 32px;
+    }
+
+
 }
 
 
@@ -58,7 +123,7 @@
 
 @media (min-width: 1024px){
 
-    .block1{
+    .block{
 
         background-image: url("../assets/images/el-graphic-white.png");
         background-position: top -250px right -200px;
@@ -70,8 +135,28 @@
         padding: 40px 50px 40px 50px;
         background-color: var(--color-vert);
         border-radius: 30px;
+
+        &--2{
+
+            background-image: url("../assets/images/el-graphic-white.png");
+            background-position: top -250px right -200px;
+            background-size: contain;
+
+            background-color: var(--color-beige);
+        }
     
     }
 
+    .list{
+        margin: 0;
+        margin-top: 41px;
+        
+    
+        &__el{
+            min-width: 600px;
+        }
+    
+    
+    }
     
 }
