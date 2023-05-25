@@ -73,6 +73,8 @@ function configureAnimation(textContainerId, textListId, textIds, duration, reve
 
 
 
+
+
 //Dark Mode
 
 const darkTheme = document.querySelector(".darkmode");

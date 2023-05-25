@@ -1,13 +1,14 @@
 
 
 .container-nav{
-    display: flex;
+    position: fixed;
     align-items: center;
+    display: flex;
+    margin: 0;
     padding: 0px 25px 0px 25px;
     width: 100vw;
     height: 80px;
     background-color: var(--color-vert);
-    position: fixed;
 }
 
 .container-nav__el{
@@ -23,8 +24,103 @@
         background-color: var(--color-blanc);
         margin: 0;
         padding: 100px 25px 100px 25px;
-        padding-bottom: 100px;
+        margin-bottom: 100px;
 
+    }
+}
+
+.card-1{
+    position: relative;
+
+    
+}
+
+.hidden{
+    display: none;
+    cursor: pointer;
+}
+
+.container-probleme{
+
+
+    background-color: var(--color-beige);
+    background-image: url("../assets/images/el-graphic-probleme.png");
+
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    border-radius: 30px;
+    font-family: 'Brygada 1918', serif;
+    color: var(--color-noir);
+    padding: 25px;
+    font-size: 40px;
+    margin: 31px 20px 31px 20px;
+    height: 370px;
+    max-width: 300px;
+    min-width: 260px;
+
+    &::after{
+        text-align: left;
+        cursor: pointer;
+        color: var(--color-beige);
+        margin-top: -63px;
+        margin-left: -25px;
+        padding-top: 40px;
+        padding-left: 30px;
+        display: block;
+        width: 80px;
+        height: 80px;
+        content: "<";
+        background-color: var(--color-vert);
+        border-radius: 0px 90px 0px 30px;
+        font-size: 16px;
+    }
+
+    & p{
+        margin-top: 15px;
+        margin-bottom: 100px;
+        padding: 0;
+        max-width: 70%;
+    }
+
+    & span{
+        margin-top: -15px;
+        padding-bottom: 0px;
+        line-height: 1;
+        text-align: end;
+        color: var(--color-vert);
+        display: block;
+        font-size: 60px;
+    }
+}
+
+.container-back{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: var(--color-beige);
+
+    border-radius: 30px;
+    font-family: 'Manrope', sans-serif;
+    color: var(--color-noir);
+    padding: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0px 20px 31px 20px;
+
+    max-width: 300px;
+    min-width: 260px;
+
+    & p{
+        padding: 0;
+    }
+
+    &__el li{
+        padding-top: 20px;
+        font-weight: 400;
     }
 }
 
@@ -48,6 +144,39 @@
 .container-titre__el{
     margin: 0px 25px 0px 25px;
 
+}
+
+.container-img{
+    
+    
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+
+    &__credit p{
+        margin-top: -58px;
+        margin-right: 18px;
+        color: var(--color-blanc);
+        font-weight: 500;
+        text-align: end;
+    }
+
+    &__el{
+        
+        &--marge img{
+            margin-bottom: 0;
+        }
+
+        & img{
+            width: 100%;
+            padding-right: 0px;
+            border-radius: 20px;
+        }
+
+        &--vert{
+            color: var(--color-vert);
+        }
+    }
 }
 
 @media (min-width: 1024px){
