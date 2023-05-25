@@ -10,29 +10,58 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 
-// Sélection du conteneur du texte
-const textContainer = document.getElementById('text-container');
-const textList = document.getElementById('text-list');
-const texts = textList.getElementsByClassName('list__el');
-
-// Calcul de la largeur totale du texte
-let totalWidth = 0;
-for (let i = 0; i < texts.length; i++) {
-  totalWidth += texts[i].offsetWidth;
-}
-
-totalWidth -= textContainer.offsetWidth;
-
-// Configuration de l'animation
-const animation = gsap.timeline({ repeat: -1, paused: true});
-animation.to(textList, { x: -totalWidth, duration: 10, ease: 'none'})
-         .to(textList, { x: 0, duration: 0 });
-
-// Lancement de l'animation
-animation.play();
-
-
-
+function configureAnimation(textContainerId, textListId, textIds, duration, reversed) {
+    const textContainer = document.querySelector(textContainerId);
+    const textList = document.querySelector(textListId);
+    const texts = textList.querySelectorAll(textIds);
+  
+    // Calcul de la largeur totale du texte
+    let totalWidth = Array.from(texts).reduce((width, text) => width + text.offsetWidth, 0);
+    totalWidth -= textContainer.offsetWidth;
+  
+    // Configuration de l'animation
+    const animation = gsap.timeline({ repeat: -1, paused: true });
+    animation.to(textList, { x: -totalWidth, duration, ease: 'none', reversed })
+  
+    // Lancement de l'animation
+    animation.play();
+  
+    // Gestion des événements de survol
+    texts.forEach((text) => {
+      text.addEventListener('mouseenter', () => {
+        animation.pause(); // Pause l'animation lorsque l'élément est survolé
+      });
+  
+      text.addEventListener('mouseleave', () => {
+        animation.play(); // Relance l'animation lorsque la souris quitte l'élément
+      });
+    });
+  
+    // Défilement circulaire des éléments qui sortent de l'écran
+    animation.eventCallback('onUpdate', () => {
+      const containerWidth = textContainer.offsetWidth;
+      const listWidth = textList.offsetWidth;
+      const offsetLeft = textList.offsetLeft;
+  
+      if (offsetLeft < containerWidth - listWidth) {
+        const lastText = textList.querySelector(textIds + ':last-child');
+        const lastTextWidth = lastText.offsetWidth;
+        const offsetCorrection = containerWidth + lastTextWidth;
+        const newPosition = offsetLeft + offsetCorrection;
+  
+        gsap.set(textList, { x: newPosition }); // Ajuster la position de l'élément sortant
+      }
+    });
+  }
+  
+  // Appel de la fonction pour chaque liste de texte
+  configureAnimation('#text-container', '#text-list', '#li', 60, false);
+  configureAnimation('#text-container1', '#text-list1', '#li1', 20, true);
+  configureAnimation('#text-container2', '#text-list2', '#li2', 30, true);
+  configureAnimation('#text-container3', '#text-list3', '#li3', 30, true);
+  configureAnimation('#text-container4', '#text-list4', '#li4', 20, true);
+  configureAnimation('#text-container5', '#text-list5', '#li5', 60, false);
+  
 
 
 

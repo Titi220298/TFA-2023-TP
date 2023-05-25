@@ -94,7 +94,7 @@
 
 
 
-#text-container{
+.slide{
     overflow: hidden;
 }
 
@@ -103,18 +103,31 @@
     flex-direction: row;
     margin: 0;
     margin-top: 41px;
+
+    &--ligth{
+        margin-top: 20px;
+
+    }
+
+    &--ligth &__el{
+        
+        font-size: 20px;
+        color: var(--color-noir);
+        background-color: var(--color-beige);
+    }
     
 
     &__el{
         position: relative;
-        min-width: 400px;
+        white-space: nowrap;
         display: flex;
         margin-right: 20px;
         background-color: var(--color-vert);
         border-radius: 60px;
         padding: 20px 32px 20px 32px;
-    }
 
+    
+    }
 
 }
 
@@ -153,7 +166,7 @@
         
     
         &__el{
-            min-width: 600px;
+            
         }
     
     
