@@ -1,4 +1,31 @@
 
+.container{
+    margin: 0px 25px 100px 25px;
+    margin-bottom: 100px;
+
+    &__hypo{
+        margin-top: 50px;
+    }
+
+    &--white{
+        background-color: var(--color-blanc);
+        margin: 0;
+        padding: 100px 25px 100px 25px;
+        margin-bottom: 100px;
+
+    }
+
+    &--beige{
+        margin: 0;
+        padding-top: 100px;
+        background-color: var(--color-beige);
+        color: var(--color-noir);
+    }
+}
+
+.container__el{
+    margin: 0px 25px 0px 25px;
+}
 
 .container-nav{
     z-index: 100;
@@ -15,19 +42,6 @@
 .container-nav__el{
     display: flex;
     flex-direction: column;
-}
-
-.container{
-    margin: 0px 25px 100px 25px;
-    margin-bottom: 100px;
-
-    &--white{
-        background-color: var(--color-blanc);
-        margin: 0;
-        padding: 100px 25px 100px 25px;
-        margin-bottom: 100px;
-
-    }
 }
 
 .cards{
@@ -150,10 +164,6 @@
         padding-top: 20px;
         font-weight: 400;
     }
-}
-
-.container__el{
-    margin: 0px 25px 0px 25px;
 }
 
 .container-titre{

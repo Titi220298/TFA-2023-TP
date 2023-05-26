@@ -39,6 +39,10 @@ body {
     color: var(--color-vert);
   }
 
+  &--black{
+    color: var(--color-noir);
+  }
+
   &--2{
     font-size: 40px;
     line-height: 1.30;

@@ -1,0 +1,30 @@
+.circle-green{
+    z-index: 1;
+    position: relative;
+    color: var(--color-beige);
+    max-width: 140px;
+    min-width: 140px;
+    height: 60px;
+    padding: 0;
+    margin-bottom: 200px;
+
+    &::before{
+        content: "";
+        z-index: -1;
+        position: absolute;
+        top: -185%;
+        height: 467%;
+        left: -70px;
+        width: 200%;
+        background-color: var(--color-vert);
+        
+        border-radius: 100%;
+
+    }
+
+}
+
+.circle-rouille{
+    color: var(--color-beige);
+    max-width: 120px;
+}
