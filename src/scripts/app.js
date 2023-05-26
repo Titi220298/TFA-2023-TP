@@ -63,6 +63,24 @@ function configureAnimation(textContainerId, textListId, textIds, duration, reve
   configureAnimation('#text-container5', '#text-list5', '#li5', 60, false);
   
 
+// Sélectionner tous les éléments avec la classe "cards"
+const cards = document.querySelectorAll('.cards');
+
+// Parcourir toutes les cartes et attacher les écouteurs d'événement
+cards.forEach(card => {
+  const open = card.querySelector('.container-probleme');
+  const back = card.querySelector('.container-back');
+
+  open.addEventListener('click', () => {
+    back.classList.remove('hidden');
+  });
+
+  back.addEventListener('click', () => {
+    back.classList.add('hidden');
+  });
+});
+
+
 
 
 

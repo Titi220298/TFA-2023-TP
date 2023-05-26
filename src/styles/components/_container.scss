@@ -1,6 +1,7 @@
 
 
 .container-nav{
+    z-index: 100;
     position: fixed;
     align-items: center;
     display: flex;
@@ -29,10 +30,15 @@
     }
 }
 
-.card-1{
+.cards{
     position: relative;
+    cursor: pointer;
 
-    
+    & .container-probleme::after{
+        font-family: 'Brygada 1918', serif;
+        font-weight: 600;
+        font-size: 35px;
+    }
 }
 
 .hidden{
@@ -60,21 +66,22 @@
     max-width: 300px;
     min-width: 260px;
 
+    
+
     &::after{
+        content: "<";
         text-align: left;
         cursor: pointer;
         color: var(--color-beige);
         margin-top: -63px;
         margin-left: -25px;
-        padding-top: 40px;
-        padding-left: 30px;
+        padding-top: 25px;
+        padding-left: 25px;
         display: block;
         width: 80px;
         height: 80px;
-        content: "<";
         background-color: var(--color-vert);
         border-radius: 0px 90px 0px 30px;
-        font-size: 16px;
     }
 
     & p{
@@ -113,6 +120,27 @@
 
     max-width: 300px;
     min-width: 260px;
+    max-height: 370px;
+
+    &::before{
+        content: "X";
+        position: absolute;
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-beige);
+        margin-top: -25px;
+        margin-left: 226px;
+        padding-top: 0px;
+        padding-left: 0px;
+        width: 50px;
+        height: 50px;
+        background-color: var(--color-vert);
+        border-radius: 0px 30px 0px 30px;
+        font-size: 16px;
+    }
 
     & p{
         padding: 0;
