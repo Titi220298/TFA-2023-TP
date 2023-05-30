@@ -6,7 +6,10 @@
 @import 'components/Button';
 @import 'components/grid';
 @import 'components/circle-ui';
+@import 'components/video';
 /* Theme */
+  
+
 
 *{
     margin: 0;
@@ -132,6 +135,24 @@
     
     }
 
+}
+
+.container__union{
+    background-image: url("../assets/images/union.jpg");
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & h2{
+        font-weight: 500;
+        color: var(--color-noir);
+        text-align: center;
+    }
 }
 
 

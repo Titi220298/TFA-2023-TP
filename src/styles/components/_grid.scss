@@ -1,10 +1,15 @@
 
 
-.container__circle{
+.container__grid-circle{
     margin: 0;
 
-    margin-top: 150px;
-    padding-bottom: 300px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    overflow: hidden;
+
+    padding-top: 150px;
+    padding-bottom: 0px;
 
     font-family: 'Brygada 1918', serif;
     font-weight: 400;
@@ -12,7 +17,7 @@
     
     display: grid;
     place-items: center;
-    grid-template-columns: 75px 1fr 1fr 75px;
+    grid-template-columns: 1fr 60px 60px 60px 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 
@@ -30,6 +35,10 @@
     grid-column-start: 3;
 }
 
+.grid-start-4{
+    grid-column-start: 4;
+}
+
 .grid-end-1{
     grid-column-end: 2;
 }
@@ -43,4 +52,8 @@
 
 .grid-end-4{
     grid-column-end: 5;
+}
+
+.grid-end-5{
+    grid-column-end: 6;
 }

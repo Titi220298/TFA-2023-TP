@@ -82,6 +82,38 @@ cards.forEach(card => {
 
 
 
+var video = document.getElementById('my-video');
+var playPauseButton = document.getElementById('play-pause-button');
+var volumeSlider = document.getElementById('volume-slider');
+var muteButton = document.getElementById('mute-button');
+
+playPauseButton.addEventListener('click', function() {
+  if (video.paused) {
+    video.play();
+    playPauseButton.textContent = 'Pause';
+  } else {
+    video.pause();
+    playPauseButton.textContent = 'Play';
+  }
+});
+
+volumeSlider.addEventListener('input', function() {
+  video.volume = volumeSlider.value;
+});
+
+muteButton.addEventListener('click', function() {
+  if (video.muted) {
+    video.muted = false;
+    muteButton.textContent = 'Mute';
+  } else {
+    video.muted = true;
+    muteButton.textContent = 'Unmute';
+  }
+});
+
+
+
+
 
 
 

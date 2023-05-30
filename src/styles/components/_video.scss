@@ -1,0 +1,20 @@
+.video-container {
+    position: relative;
+    max-width: 640px;
+  }
+  
+  .controls {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .controls button,
+  .controls input[type="range"] {
+    margin: 0 5px;
+  }
