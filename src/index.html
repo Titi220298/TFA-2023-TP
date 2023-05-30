@@ -391,15 +391,28 @@
     </div>
 
     <div class="video-container">
-      <video id="my-video" src="/assets/images/video.mp4" width="640" height="360"></video>
+      <video id="my-video" src="/assets/images/video.mp4"></video>
       <div class="controls">
-        <button id="play-pause-button">Play/Pause</button>
-        <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="1">
-        <button id="mute-button">Mute</button>
+        <button id="play-pause-button" class="play">
+          <svg class="play-icon" viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+          <svg class="pause-icon" viewBox="0 0 24 24">
+            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+          </svg>
+        </button>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.3">
+        <button id="mute-button" class="mute">
+          <svg class="mute-icon" viewBox="0 0 24 24">
+            <path d="M7 9v6h4l5 5V4l-5 5H7z" />
+          </svg>
+          <svg class="unmute-icon" viewBox="0 0 24 24">
+            <path d="M11 4v16l-5-5H2V9h4L11 4zm7.21 3.79L16 9.17l2.79 2.79-1.42 1.42L14.58 10l-2.79 2.79-1.42-1.42L13.17 8l-2.79-2.79 1.42-1.42L14.58 6l2.79-2.79 1.42 1.42z" />
+          </svg>
+        </button>
       </div>
     </div>
-
-
+    
 
   </section>
 

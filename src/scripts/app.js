@@ -82,34 +82,120 @@ cards.forEach(card => {
 
 
 
-var video = document.getElementById('my-video');
-var playPauseButton = document.getElementById('play-pause-button');
-var volumeSlider = document.getElementById('volume-slider');
-var muteButton = document.getElementById('mute-button');
+//video
+
+var playPauseButton = document.querySelector('#play-pause-button');
+var muteButton = document.querySelector('#mute-button');
+var video = document.querySelector('#my-video');
+var volumeInput = document.querySelector('#volume-slider'); // Ajout de l'élément d'entrée de volume
+var videoContainer = document.querySelector('.video-container');
+var controls = document.querySelector('.controls');
+var timeoutId;
 
 playPauseButton.addEventListener('click', function() {
-  if (video.paused) {
-    video.play();
-    playPauseButton.textContent = 'Pause';
-  } else {
-    video.pause();
-    playPauseButton.textContent = 'Play';
-  }
-});
-
-volumeSlider.addEventListener('input', function() {
-  video.volume = volumeSlider.value;
+  togglePlayPause();
 });
 
 muteButton.addEventListener('click', function() {
-  if (video.muted) {
-    video.muted = false;
-    muteButton.textContent = 'Mute';
-  } else {
-    video.muted = true;
-    muteButton.textContent = 'Unmute';
+  toggleMute();
+});
+
+volumeInput.addEventListener('input', function() { // Ajout de l'écouteur d'événement pour les changements de valeur
+  updateVolume();
+});
+
+videoContainer.addEventListener('mousemove', function() {
+  showControls();
+  resetTimeout();
+});
+
+videoContainer.addEventListener('mouseout', function(event) {
+  if (!isMouseOverControls(event)) {
+    hideControls();
   }
 });
+
+controls.addEventListener('mouseenter', function() {
+  resetTimeout();
+});
+
+controls.addEventListener('mouseleave', function() {
+  hideControls();
+});
+
+function togglePlayPause() {
+  if (video.paused) {
+    video.play();
+    playPauseButton.classList.remove('play');
+    playPauseButton.classList.add('pause');
+  } else {
+    video.pause();
+    playPauseButton.classList.remove('pause');
+    playPauseButton.classList.add('play');
+  }
+}
+
+function toggleMute() {
+  if (video.muted) {
+    video.muted = false;
+    muteButton.classList.remove('unmute');
+    muteButton.classList.add('mute');
+  } else {
+    video.muted = true;
+    muteButton.classList.remove('mute');
+    muteButton.classList.add('unmute');
+  }
+}
+
+function updateVolume() { // Fonction pour mettre à jour le volume de la vidéo
+  var volume = volumeInput.value;
+  video.volume = volume;
+}
+
+function showControls() {
+  controls.style.display = 'flex';
+}
+
+function hideControls() {
+  controls.style.display = 'none';
+}
+
+function resetTimeout() {
+  clearTimeout(timeoutId);
+  timeoutId = setTimeout(function() {
+    hideControls();
+  }, 1000);
+}
+
+function isMouseOverControls(event) {
+  var controlsRect = controls.getBoundingClientRect();
+  var mouseX = event.clientX;
+  var mouseY = event.clientY;
+
+  return (
+    mouseX >= controlsRect.left &&
+    mouseX <= controlsRect.right &&
+    mouseY >= controlsRect.top &&
+    mouseY <= controlsRect.bottom
+  );
+}
+
+// GSAP ScrollTrigger
+
+ScrollTrigger.create({
+  trigger: videoContainer,
+  start: "top-=120px botton", // Détecte lorsque le haut du conteneur vidéo atteint le bas de la fenêtre
+  markers: true,
+  onEnter: function() {
+    video.play();
+  },
+});
+
+
+
+
+
+
 
 
 

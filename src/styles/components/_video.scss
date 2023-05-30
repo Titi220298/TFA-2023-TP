@@ -1,14 +1,29 @@
 .video-container {
     position: relative;
-    max-width: 640px;
+
+    margin-bottom: 1000px;
+
+    & video{
+        z-index: 0;
+        width: 100%;
+    }
   }
   
   .controls {
+    line-height: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
     position: absolute;
-    bottom: 10px;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    width: 20%;
+    height: 56px;
+    background-color: var(--color-vert);
+    border-radius: 30px;
     color: #fff;
     text-align: center;
     padding: 10px;
@@ -17,4 +32,38 @@
   .controls button,
   .controls input[type="range"] {
     margin: 0 5px;
+  }
+  
+
+
+  .controls button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .controls button svg {
+    fill: #fff;
+    width: 100%;
+    height: 100%;
+  }
+
+  .controls button.play .pause-icon {
+    display: none;
+  }
+  
+  .controls button.pause .play-icon {
+    display: none;
+  }
+  
+  /* Styles spécifiques pour le bouton de sourdine */
+  .controls button.mute .unmute-icon {
+    display: none;
+  }
+  
+  .controls button.unmute .mute-icon {
+    display: none;
   }
