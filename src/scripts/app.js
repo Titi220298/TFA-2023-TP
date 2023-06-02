@@ -10,6 +10,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 
+//element défilant
+
 function configureAnimation(textContainerId, textListId, textIds, duration, reversed) {
     const textContainer = document.querySelector(textContainerId);
     const textList = document.querySelector(textListId);
@@ -62,6 +64,8 @@ function configureAnimation(textContainerId, textListId, textIds, duration, reve
   configureAnimation('#text-container4', '#text-list4', '#li4', 20, true);
   configureAnimation('#text-container5', '#text-list5', '#li5', 60, false);
   
+
+//cards
 
 // Sélectionner tous les éléments avec la classe "cards"
 const cards = document.querySelectorAll('.cards');
@@ -184,11 +188,19 @@ function isMouseOverControls(event) {
 
 ScrollTrigger.create({
   trigger: videoContainer,
-  start: "top-=120px botton", // Détecte lorsque le haut du conteneur vidéo atteint le bas de la fenêtre
+  start: "top-=120px top", // Détecte lorsque le haut du conteneur vidéo atteint le bas de la fenêtre
+  end: "bottom top",
   markers: true,
   onEnter: function() {
     video.play();
+    playPauseButton.classList.remove('play');
+    playPauseButton.classList.add('pause');
   },
+  onLeave: function() {
+    video.pause();
+    playPauseButton.classList.remove('pause');
+    playPauseButton.classList.add('play');
+  }
 });
 
 
@@ -214,34 +226,42 @@ ScrollTrigger.create({
 //Dark Mode
 
 const darkTheme = document.querySelector(".darkmode");
+if(darkTheme){
+  //Gérer le data-theme du body
+  darkTheme.addEventListener("click", function(){
+      if(document.body.dataset.theme === "dark"){
+          light();
+          localStorage.setItem("theme", "light");
+      } else {
+          dark();
+          localStorage.setItem("theme", "dark");
+      } 
+  });
 
-//Gérer le data-theme du body
-darkTheme.addEventListener("click", function(){
-    if(document.body.dataset.theme === "dark"){
-        light();
-        localStorage.setItem("theme", "light");
-    } else {
-        dark();
-        localStorage.setItem("theme", "dark");
-    } 
-});
+  //Est ce que l"utilisateur veut un theme dark?
+  const userDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-//Est ce que l"utilisateur veut un theme dark?
-const userDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  //Est ce que l'utilisateur a déjà indiqué une préférence sur notre site?
+  let theme = localStorage.getItem('theme');
+  if((!theme && userDark) || (theme === "dark")){
+      dark();
+  } else if(theme === "light"){
+      light();
+  }
 
-//Est ce que l'utilisateur a déjà indiqué une préférence sur notre site?
-let theme = localStorage.getItem('theme');
-if((!theme && userDark) || (theme === "dark")){
-    dark();
-} else if(theme === "light"){
-    light();
+  //function pour le dark
+  function dark(){
+      document.body.setAttribute("data-theme", "dark");
+  }
+  //function pour le light
+  function light(){
+      document.body.setAttribute("data-theme", "light");
+  }
 }
 
-//function pour le dark
-function dark(){
-    document.body.setAttribute("data-theme", "dark");
-}
-//function pour le light
-function light(){
-    document.body.setAttribute("data-theme", "light");
-}
+
+
+
+
+//dragnabbit
+

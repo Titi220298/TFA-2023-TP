@@ -1,11 +1,16 @@
 .video-container {
     position: relative;
 
-    margin-bottom: 1000px;
+    margin-bottom: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
 
     & video{
         z-index: 0;
         width: 100%;
+        border-radius: 30px;
+
+        margin-bottom: -100px;
     }
   }
   
@@ -19,15 +24,18 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 30px;
-    width: 20%;
+    bottom: -93%;
+    width: 90%;
     height: 56px;
     background-color: var(--color-vert);
     border-radius: 30px;
     color: #fff;
     text-align: center;
     padding: 10px;
+
   }
+
+
   
   .controls button,
   .controls input[type="range"] {
