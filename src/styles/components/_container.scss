@@ -36,18 +36,59 @@
 .container-nav{
     z-index: 100;
     position: fixed;
-    align-items: center;
-    display: flex;
     margin: 0;
-    padding: 0px 25px 0px 25px;
+    padding: 12px 25px 12px 25px;
     width: 100vw;
     height: 80px;
     background-color: var(--color-vert);
-}
 
-.container-nav__el{
-    display: flex;
-    flex-direction: column;
+    &__el{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+
+    &__burger{
+        display: flex;
+
+        & svg{
+            cursor: pointer;
+        }
+
+        & svg g path{
+            fill: var(--color-beige);
+        }
+    }
+
+    &__croix{
+        display: flex;
+
+        & svg{
+            cursor: pointer;
+            
+            & path{
+                fill: var(--color-beige);
+            }
+        }
+    }
+
+    &__list{
+        font-size: 20px;
+        margin-left: -25px;
+        width: 100vw;
+        background-color: var(--color-vert);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 25px;
+
+        & li{
+            padding-top: 10px;
+        }
+    }
 }
 
 .cards{

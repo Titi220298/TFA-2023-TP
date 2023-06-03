@@ -8,6 +8,25 @@ gsap.registerPlugin(ScrollTrigger);
 
 //gsap.to("H1", {duration: 2, x: 200} );
 
+//burger
+
+const burger = document.querySelector(".container-nav__burger");
+const croix = document.querySelector(".container-nav__croix");
+const list = document.querySelector(".container-nav__list");
+
+burger.addEventListener('click', () => {
+  burger.classList.add("hidden");
+  croix.classList.remove('hidden');
+  list.classList.remove('hidden');
+});
+
+croix.addEventListener('click', () => {
+  burger.classList.remove("hidden");
+  croix.classList.add('hidden');
+  list.classList.add('hidden');
+});
+
+
 
 
 //element défilant
