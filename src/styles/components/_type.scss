@@ -89,6 +89,12 @@ body {
 
 }
 
+.active a{
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--color-beige);
+
+}
+
 .text--dim-rencontre{
   max-width: 385px;
 }

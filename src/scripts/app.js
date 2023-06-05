@@ -17,14 +17,69 @@ const list = document.querySelector(".container-nav__list");
 burger.addEventListener('click', () => {
   burger.classList.add("hidden");
   croix.classList.remove('hidden');
-  list.classList.remove('hidden');
+  list.classList.remove('hidden-nav');
 });
 
 croix.addEventListener('click', () => {
   burger.classList.remove("hidden");
   croix.classList.add('hidden');
-  list.classList.add('hidden');
+  list.classList.add('hidden-nav');
 });
+
+//observeur
+
+document.addEventListener("DOMContentLoaded", function() {
+  const navItems = document.querySelectorAll('.container-nav__list .text-nav a');
+  const sections = Array.from(navItems, item => document.querySelector(item.getAttribute('href')));
+
+  const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+          const id = entry.target.getAttribute('id');
+          const navItem = document.querySelector(`.container-nav__list .text-nav a[href="#${id}"]`).parentNode;
+          if (entry.isIntersecting) {
+              navItem.classList.add('active');
+          } else {
+              navItem.classList.remove('active');
+          }
+      });
+  }, { threshold: 0.20 }); // 0.1 signifie que la classe 'active' sera appliquée lorsque 10% de la section sont visibles
+
+  sections.forEach(section => {
+      observer.observe(section);
+  });
+});
+
+document.querySelectorAll('.container-nav__list a').forEach(a => {
+  a.addEventListener('click', function(e) {
+    e.preventDefault();
+    let target = document.querySelector(this.getAttribute('href'));
+    let targetPosition = target.getBoundingClientRect().top;
+    window.scrollTo({
+      top: targetPosition + window.scrollY - 100,  // 80px au-dessus de la section cible
+      behavior: 'smooth'
+    });
+  });
+});
+
+//ma vison
+
+const vision = document.querySelector("#vision");
+const reponse = document.querySelector(".container__reponse");
+let compteur = 0;
+
+vision.addEventListener('click', () => {
+  compteur++;
+  if (compteur % 2 !== 0) {  // Si le compteur est impair
+    reponse.classList.remove("hidden");
+    vision.innerHTML = 'Réduire';
+  } else {  // Si le compteur est pair
+    reponse.classList.add("hidden");
+    vision.innerHTML = 'Ma vision';
+  }
+});
+
+
+
 
 
 

@@ -57,7 +57,7 @@
     </div>
   </div>
 
-  <ul class="container-nav__list hidden">
+  <ul class="container-nav__list hidden-nav">
     <li class="text-nav"><a href="#rencontre">Rencontres</a></li>
     <li class="text-nav"><a href="#sondage">Sondage</a></li>
     <li class="text-nav"><a href="#interviews">interviews</a></li>
@@ -78,7 +78,7 @@
 
   </section>
 
-  <section class="container">
+  <section id="rencontre" class="container">
     <h2 class="title title--2">Les rencontres</h2>
     <h3 class="title title--3">Les artisans créateurs</h3>
     <div class="container__el">
@@ -98,13 +98,13 @@
           créer un sondage plus précis.</p>
 
         <button class="button">Le guide d’entretien</button>
-        <button class="button">Le sondage</button>
+        <button class="button"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfHAY7-i97LH0oJ4VsPl7dNhURD_nhy7T_cPnZkeWdsTYdxHw/viewform">Le sondage</a></button>
 
       </div>
 
       <div class="block block--2">
         <h4 class="title title--4 title--vert">Les groupes facebook</h4>
-        <p class="text text--black">J’ai cherché des groupes d’artisans sur Facebook et j’ai publié des messages à leur attention. Egalement j’ai essayé de trouver des connaissances pour leur proposer une interview.</p>
+        <p class="text--black">J’ai cherché des groupes d’artisans sur Facebook et j’ai publié des messages à leur attention. Egalement j’ai essayé de trouver des connaissances pour leur proposer une interview.</p>
         <span class="text-spc">x25</span>
         
         <div class="block-img">
@@ -132,16 +132,17 @@
           <img class="img" src="assets/images/groupe1.jpg">
           <img class="img" src="assets/images/groupe1.jpg">
         </div>
-        <p class="text text--black">J’ai cherché des groupes d’artisans sur Facebook et j’ai publié des messages à leur attention. Egalement j’ai essayé de trouver des connaissances pour leur proposer une interview.</p>
+        <p>J’ai cherché des groupes d’artisans sur Facebook et j’ai publié des messages à leur attention. Egalement j’ai essayé de trouver des connaissances pour leur proposer une interview.</p>
       
       </div>
     </div>
   </section>
 
-  <section class="container">
-    <h2 class="title title--2">Les rencontres</h2>
-    <h3 class="title title--3">Les artisans créateurs</h3>
-    <p class="text">Suite à plusieurs semaines d'échanges, la communauté participe activement au sondage. Celui-ci me permet de mieux comprendre la vie quotidienne et les passions de chacun.</p>
+  <div id="sondage">
+  <section class="container container--margin">
+    <h2 class="title title--2">Les retours</h2>
+    <h3 class="title title--3">Des réponses interpellantes..</h3>
+    <p class="text">Suite à plusieurs semaines d'échanges, la communauté participe activement au sondage. Celui-ci me permet de mieux comprendre la vie quotidienne et les passions de chacun. </p>
     <p class="text">Toutes ces données sont traitées et analysées pour mon projet de recherche.</p>
   
   </section>
@@ -232,9 +233,13 @@
   </section>
 
   <section class="container container--white">
-    <h2 class="title title--2 title--vert">Découvrez tout les analyses détaillé du sondage</h2>
-    <button class="button button--vert">Analyses du sondage en un seul clic</button>
 
+    <div class="container__flex-col">
+      <h2 class="title title--2 title--vert">Découvrez tout les analyses détaillé du sondage</h2>
+      <button class="button button--vert">Analyses du sondage en un seul clic</button>
+    </div>  
+
+    <div class="container__flex">
     <div class="container-img">
       <figure class="container-img__el container-img__el--vert">
         <p>Artisans à Floreffe</p>
@@ -245,35 +250,38 @@
       </figure>
     </div>
 
-      <div class="container-img">
-        <figure class="container-img__el container-img__el--vert">
-          <p>À Casteau</p>
-          <img src="assets/images/chateau.jpg" alt="Description de l'image">
-          <figcaption class="container-img__credit">
-            <p>©ÉdA</p>
-          </figcaption>
-        </figure>
-      </div>
+    <div class="container-img">
+      <figure class="container-img__el container-img__el--vert">
+        <p>À Casteau</p>
+        <img src="assets/images/chateau.jpg" alt="Description de l'image">
+        <figcaption class="container-img__credit">
+          <p>©ÉdA</p>
+        </figcaption>
+      </figure>
+    </div>
 
-      <div class="container-img">
-        <figure class="container-img__el container-img__el--vert container-img__el--marge">
-          <p>Fête des Métiers</p>
-          <img src="assets/images/Fete-metier.jpg" alt="Description de l'image">
-          <figcaption class="container-img__credit">
-            <p>©Thierry Houyel</p>
-          </figcaption>
-        </figure>
-      </div>
+    <div class="container-img">
+       <figure class="container-img__el container-img__el--vert container-img__el--marge">
+        <p>Fête des Métiers</p>
+        <img src="assets/images/Fete-metier.jpg" alt="Description de l'image">
+        <figcaption class="container-img__credit">
+          <p>©Thierry Houyel</p>
+        </figcaption>
+      </figure>
+    </div>
+    </div>
 
   </section>
 
-  <section class="container container--inter">
+  </div>
+
+  <section id="interviews" class="container container--inter">
 
     <h2 class="title title--2">Les interviews</h2>
     <h3 class="title title--3">Les problèmes et les sujet localisés :</h3>
     <p>J’ai identifié les problématiques les plus fréquemment citées par les personnes interrogées, ainsi que les sujets les plus importants pour elles. Cette première phase de réflexion sur mon projet m’a permis de définir plusieurs hypothèses et solutions.</p>
 
-
+    <div class="container__flex">
     <div class="cards">
     <div class="container-probleme">
       <p>Problème  de lieux  de vente</p>
@@ -321,7 +329,9 @@
         </ul>
       </div>
     </div>
+    </div>
 
+    <div class="container__flex container__flex--margin">
     <div class="cards">
       <div class="container-probleme">
         <p>Problème  de lieux  de vente</p>
@@ -369,13 +379,14 @@
         </ul>
       </div>
     </div>
+    </div>
 
 
   </section>
 
-  <section class="container container--beige">
+  <section id="hypothese" class="container container--beige">
 
-    <div class="container__el">
+    <div class="container__el container__el--hypo">
 
       <h2 class="title title--2 title--black">L'hypothèse</h2>
       <h3 class="title title--3 title--black">Les intérêts pour les artisans</h3>
@@ -389,7 +400,7 @@
 
     <div class="container__grid-circle">
       
-      <p class="circle-01-margin circle-green grid-start-2 grid-end-4">Problème de point de vente.</p>
+      <p class="circle-01-margin circle-green grid-start-2 grid-end-4 dgrid-start-1 dgrid-end-3">Problème de point de vente.</p>
       <p class="circle-02-margin circle-green-border-small grid-start-3 grid-end-5">Du manque de notoriété, ce qui impacte vos ventes.</p>
       <p class="circle-03-margin circle-rouille grid-start-1 grid-end-4">La mise en avant des produits artisanaux.</p>
       <p class="circle-04-margin circle-green-border-small grid-start-2 grid-end-4">Encore plus <br> de temps <br> pour leur créations</p>
@@ -405,7 +416,7 @@
 
   </section>
 
-  <section class="container container--beige">
+  <section id="hypothese" class="container container--beige">
 
     <div class="container__union">
 
@@ -439,7 +450,7 @@
 
   </section>
 
-  <section class="conatiner">
+  <section id="fonctionnalite" class="conatiner">
 
     <div class="container__el">
 
@@ -491,7 +502,7 @@
 
 <section class="conatiner">
 
-<div class="container__el">
+<div id="experience" class="container__el">
 
   <h2 class="title title--2">Une expérience.</h2>
   <h3 class="title title--3">Des rencontres</h3>
@@ -517,7 +528,18 @@
 
     <h2 class="title title--2">" L'artisanat, est la solution. "</h2>
     <h5 class="title title--5">Nous sommes conscients, unissons-nous face aux enjeux.</h5>
-    <button class="button button--vert">Ma vision</button>
+    <h5 class="title title--5">Je suis convaincu qu’un jour,</h5>
+    <div class="container__reponse hidden">
+
+      <p>La méthode de production industrielle dominante sera transformée dans une perspective différente.</p>
+      <p>Il est nécessaire d’exploiter les ressources du pays ou de collaborer avec d’autres pour construire notre futur.</p>
+      <p>Il est important de mettre en valeur les artisans et leurs créations.</p>
+      <p>Tous ensemble encourageons à penser local et durable !</p>
+
+      <h5 class="title title--5">Texte explicatif</h5>
+      <p>Je suis convaincu qu'un jour, la méthode de production industrielle qui est actuellement dominante sur le plan économique sera repensée et transformée dans une perspective différente, qu'elle soit politique ou non. Dans cette optique, nous devons travailler davantage à exploiter les ressources de notre pays ou à collaborer étroitement avec d'autres, et à apprendre à construire nos objets ainsi que nos matériaux et à les développer, qu'il s'agisse de petites ou de grandes échelles. Pour moi, il est important d'aider et de rendre accessible à tous ceux qui partagent leurs créations et leurs objets du quotidien. Nous devons habituer la population à utiliser des matériaux recyclés, réinventés la vision du local pour qu’ils accrochent à cette idée.</p>
+    </div>
+    <button id="vision" class="button button--vert">Ma vision</button>
   </div>
 
 
@@ -558,13 +580,7 @@
 
     <p class="credit">Thibault Poucet DWT 2023</p>
 
-    
-
-
   </div>
-
-
-
 </footer>
 
 

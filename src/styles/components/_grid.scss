@@ -21,6 +21,7 @@
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 
+
 }
 
 .grid-start-1{
@@ -56,4 +57,44 @@
 
 .grid-end-5{
     grid-column-end: 6;
+}
+
+
+
+
+@media(min-width: 1024px){
+    .dgrid-start-1{
+        grid-column-start: 1;
+    }
+    
+    .dgrid-start-2{
+        grid-column-start: 2;
+    }
+    
+    .dgrid-start-3{
+        grid-column-start: 3;
+    }
+    
+    .dgrid-start-4{
+        grid-column-start: 4;
+    }
+    
+    .dgrid-end-1{
+        grid-column-end: 2;
+    }
+    
+    .dgrid-end-2{
+        grid-column-end: 3;
+    }
+    .dgrid-end-3{
+        grid-column-end: 4;
+    }
+    
+    .dgrid-end-4{
+        grid-column-end: 5;
+    }
+    
+    .dgrid-end-5{
+        grid-column-end: 6;
+    }
 }

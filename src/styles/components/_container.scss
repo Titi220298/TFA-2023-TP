@@ -26,6 +26,14 @@
         background-color: var(--color-beige);
         margin: 0;
     }
+
+    @media (min-width: 1024px){
+        &__flex{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
 }
 
 .container__el{
@@ -94,6 +102,7 @@
 .cards{
     position: relative;
     cursor: pointer;
+    width: 340px;
 
     & .container-probleme::after{
         font-family: 'Brygada 1918', serif;
@@ -105,6 +114,10 @@
 .hidden{
     display: none;
     cursor: pointer;
+}
+
+.hidden-nav{
+    display: none;
 }
 
 .container-probleme{
@@ -124,8 +137,7 @@
     font-size: 40px;
     margin: 31px 20px 31px 20px;
     height: 370px;
-    max-width: 300px;
-    min-width: 260px;
+    width: 300px;
 
     
 
@@ -445,6 +457,25 @@
         padding-top: 20px;
         width: 300px ;
     }
+
+    & h5:nth-child(3){
+        padding-top: 100px;
+        text-align: center;
+    }
+
+    & button{
+        margin-top: 20px;
+    }
+}
+
+.container__reponse{
+    color: var(--color-noir);
+    text-align: left;
+
+    & h5{
+        text-align: left;
+        padding-top: 100px;
+    }
 }
 
 
@@ -476,6 +507,7 @@
 .conatiner__right{
     display: flex;
     justify-content: space-between;
+    margin-top: 15px;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 50px;
@@ -518,51 +550,38 @@
     }
 }
 
-
-@media (min-width: 1024px){
-
+@media (min-width: 1110px){
     .container-nav{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0px 100px 0px 100px;
-        width: 100vw;
-        height: 80px;
-        background-color: var(--color-vert);
-        position: fixed;
-    }
 
-    .container-nav__el{
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
+
+        &__list{
+            background-color: transparent;
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            padding: 0;
+
+            & li{
+                padding: 0;
+            }
+        }
+
+        &__el{
+            display: block;
+        }
+
+        &__list li a{
+        }
+
+        &__burger{
+            display: none;
+        }
     }
 
-    .container{
-        margin: 0 100px 0 100px;
+    .hidden-nav{
+        display: flex;
     }
-
-    .container__el{
-        margin: 0 120px 0 120px;
-    }
-
-    .container-titre{
-        
-        margin-bottom: 200px; 
-        padding: 200px 0 0px 0;
-        width: 100vw;
-        height: 150vh;
-        background-image: url("../assets/images/img-rue.jpg");
-    
-        background-position: top;
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-
-    .container-titre__el{
-        margin: auto auto auto 100px;
-        max-width: 70vw;
-    
-    }
-
-
 }
