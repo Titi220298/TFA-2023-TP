@@ -25,6 +25,33 @@
 
 }
 
+.circle-green--3text{
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    color: var(--color-beige);
+    max-width: 140px;
+    min-width: 140px;
+    height: 90px;
+    padding: 0;
+
+
+    &::before{
+        content: "";
+        z-index: -1;
+        position: absolute;
+        top: -97px;
+        height: 311%;
+        left: -70px;
+        width: 200%;
+        background-color: var(--color-vert);
+        
+        border-radius: 100%;
+
+    }
+
+}
+
 .circle-green-border-small{
 
     
@@ -40,8 +67,60 @@
         content: "";
         z-index: -1;
         position: absolute;
-        top: -37%;
-        height: 170%;
+        top: -43%;
+        height: 175%;
+        left: -28%;
+        width: 150%;
+        border: solid 2px var(--color-vert);
+        
+        border-radius: 100%;
+
+    }
+}
+
+.circle-green-border-small--left{
+
+    
+    z-index: 1;
+    position: relative;
+    color: var(--color-vert);
+    max-width: 140px;
+    min-width: 140px;
+    height: 120px;
+    padding: 0;
+
+    &::before{
+        content: "";
+        z-index: -1;
+        position: absolute;
+        top: -43%;
+        height: 175%;
+        left: -36%;
+        width: 150%;
+        border: solid 2px var(--color-vert);
+        
+        border-radius: 100%;
+
+    }
+}
+
+.circle-green-border-small--2text{
+
+    
+    z-index: 1;
+    position: relative;
+    color: var(--color-vert);
+    max-width: 140px;
+    min-width: 140px;
+    height: 60px;
+    padding: 0;
+
+    &::before{
+        content: "";
+        z-index: -1;
+        position: absolute;
+        top: -72px;
+        height: 350%;
         left: -28%;
         width: 150%;
         border: solid 2px var(--color-vert);
@@ -77,9 +156,9 @@
     }
 }
 
-.circle-rouille-text{
+.circle-green-text{
     text-align: left;
-    font-size: 16px;
+    font-size: 20px;
     z-index: 1;
     position: relative;
     color: var(--color-vert);
@@ -156,29 +235,29 @@
 }
 
 .circle-01-margin{
-    margin-bottom: 150px;
+    margin-bottom: 170px;
 }
 
 .circle-02-margin{
-    margin-bottom: 110px;
+    margin-bottom: 130px;
 }
 .circle-03-margin{
-    margin-bottom: 128px;
+    margin-bottom: 145px;
 }
 .circle-04-margin{
     margin-bottom: 80px;
 }
 .circle-05-margin{
-    margin-bottom: 15px;
+    margin-bottom: 35px;
 }
 .circle-06-margin{
-    margin-bottom: 100px;
+    margin-bottom: 140px;
 }
 .circle-07-margin{
-    margin-bottom: 130px;
+    margin-bottom: 120px;
 }
 .circle-08-margin{
-    margin-bottom: 140px;
+    margin-bottom: 130px;
 }
 .circle-09-margin{
     margin-bottom: 125px;
