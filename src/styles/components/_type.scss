@@ -181,6 +181,18 @@ p{
       font-size: 25px;
       line-height: 1.30;
     }
+
+    &--beige{
+      color: var(--color-beige);
+    }
+  
+    &--vert{
+      color: var(--color-vert);
+    }
+  
+    &--black{
+      color: var(--color-noir);
+    }
   }
 
   .text-nav a{

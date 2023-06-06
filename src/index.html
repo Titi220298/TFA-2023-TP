@@ -383,8 +383,9 @@
 
 
   </section>
-
-  <section id="hypothese" class="container container--beige">
+  
+  <div id="hypothese">
+  <section class="container container--beige">
 
     <div class="container__el container__el--hypo">
 
@@ -415,6 +416,7 @@
     </div>
 
   </section>
+  </div>
 
   <section class="container container--beige reset">
 
@@ -424,7 +426,7 @@
       
     </div>
 
-    <div class="video-container">
+    <div id="video" class="video-container">
       <video id="my-video" src="/assets/images/video.mp4"></video>
       <div class="controls">
         <button id="play-pause-button" class="play">
@@ -450,9 +452,9 @@
 
   </section>
 
-  <section id="fonctionnalite" class="conatiner">
+  <section id="fonctionnalite" class="container">
 
-    <div class="container__el">
+    <div class="container__fonc">
 
       <h2 class="title title--2">Suggestions de Fonctionnalités </h2>
       <h3 class="title title--3">Des problèmes solutionnés</h3>
@@ -481,6 +483,8 @@
         <img src="assets/images/louer.jpg" alt="">
 
       </div>
+    </div>
+    <div class="container__block">
 
       <div class="container__back-img container__back-img--3">
         <h4 class="title title--4 title--vert">Etat de la livraison</h4>
@@ -491,7 +495,7 @@
 
       <div class="container__back-img container__back-img--4">
         <h4 class="title title--4 title--vert">Coming Soon</h4>
-        <p>D’autre fonctionnalités à dévelloper</p>
+        <p>D’autre fonctionnalités s'ajouterons plus tard dans le dévellopement.</p>
         <img src="assets/images/coming.jpg" alt="">
 
       </div>
@@ -500,21 +504,25 @@
 
 </section>
 
-<section class="conatiner">
+<section id="experience" class="container">
 
-<div id="experience" class="container__el">
+<div class="container__exp">
 
   <h2 class="title title--2">Une expérience.</h2>
   <h3 class="title title--3">Des rencontres</h3>
-  <p>La recherche et la conception de ce travail ont été très enrichissantes. Le projet m'a permis d'observer l'élaboration étape par étape des recherches et des problèmes, ainsi que la découverte d'une solution. Mon hypothèse renforce l'importance croissante d'un besoin pour la communauté des artisans, que nous avions sous-estimée jusqu'à présent.</p>
-  <p>Cette communauté est bien plus grande que je ne le pensais. Mon objectif était de découvrir et de confirmer un problème lié aux lieux de vente. Bien que la solution nécessite encore beaucoup de travail dans tous ses aspects, le début est prometteur et offre de nombreuses possibilités.</p>
 
-  <h3 class="title title--3 title--beige circle">Documents</h3>
+  <div class="container__flex">
+    <p>La recherche et la conception de ce travail ont été très enrichissantes. Le projet m'a permis d'observer l'élaboration étape par étape des recherches et des problèmes, ainsi que la découverte d'une solution. Mon hypothèse renforce l'importance croissante d'un besoin pour la communauté des artisans, que nous avions sous-estimée jusqu'à présent.</p>
+    <p>Cette communauté est bien plus grande que je ne le pensais. Mon objectif était de découvrir et de confirmer un problème lié aux lieux de vente. Bien que la solution nécessite encore beaucoup de travail dans tous ses aspects, le début est prometteur et offre de nombreuses possibilités.</p>
 
-  <div class="container__end">
+    <h3 class="title title--3 title--beige circle">Documents</h3>
 
-    <h3 class="title title--3">Revoir la vidéo</h3>
-    <h2 class="title title--2 title--black">Merci à toute l'équipe DWT 🏴‍☠️ <br> ainsi que la communauté des Artisans</h2>
+  </div>
+
+  <div class="container__end container__flex">
+
+    <a href="#video"><h3 class="title title--3">Revoir la vidéo</h3></a>
+    <h4 class="title title--4 title--black">Merci à toute l'équipe DWT 🏴‍☠️ <br> ainsi que la communauté des Artisans</h4>
 
   </div>
 
@@ -522,13 +530,14 @@
 
 </section>
 
-<section class="conatiner container--white">
+<section class="container container--white">
 
   <div class="container__citation">
 
     <h2 class="title title--2">" L'artisanat, est la solution. "</h2>
     <h5 class="title title--5">Nous sommes conscients, unissons-nous face aux enjeux.</h5>
     <h5 class="title title--5">Je suis convaincu qu’un jour,</h5>
+    
     <div class="container__reponse hidden">
 
       <p>La méthode de production industrielle dominante sera transformée dans une perspective différente.</p>
@@ -547,16 +556,18 @@
 
 <footer class="container container--footer">
 
-  <div class="container__footer">
+  <div class="container__footer container__flex">
 
     <div class="container__left">
-
       <h2 class="title title--2 title--black">L'artisanat</h2>
-      <button class="button button--vert">Le guide d’entretien</button>
-      <button class="button button--vert">Le sondage</button>
-      <button class="button button--vert">Les interviews</button>
-      <button class="button button--vert">Voir les réponses du sondage</button>
-      <button class="button button--vert">Analyses du sondage</button>
+
+      <div class="container__button">
+        <button class="button button--vert">Le guide d’entretien</button>
+        <button class="button button--vert">Le sondage</button>
+        <button class="button button--vert">Les interviews</button>
+        <button class="button button--vert">Voir les réponses du sondage</button>
+        <button class="button button--vert">Analyses du sondage</button>
+      </div>
     </div>
 
     <div class="conatiner__right">
