@@ -68,7 +68,7 @@
 
 </nav>
 
-<body data-theme="ligth">
+<body data-theme="ligth" class="">
   <section class="container-titre">
     <div class="container-titre__el">
       <h4 class="title title--4">Une solution pour les artisans créateurs pour répondre plusieurs problèmes ?</h4>
@@ -81,8 +81,8 @@
   <section id="rencontre" class="container">
     <h2 class="title title--2">Les rencontres</h2>
     <h3 class="title title--3">Les artisans créateurs</h3>
-    <div class="container__el">
-      <div class="block">
+    <div class="container__el container-grid-block">
+      <div class="block grid-start-1 grid-end-1">
         <h4 class="title title--4 title--beige">Les premières approches</h4>
         <p class="text text--dim-rencontre">Je me suis intéressé aux artisans, 
           créateurs et designers en raison de ma 
@@ -98,21 +98,21 @@
           créer un sondage plus précis.</p>
 
         <button class="button">Le guide d’entretien</button>
-        <button class="button"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfHAY7-i97LH0oJ4VsPl7dNhURD_nhy7T_cPnZkeWdsTYdxHw/viewform">Le sondage</a></button>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfHAY7-i97LH0oJ4VsPl7dNhURD_nhy7T_cPnZkeWdsTYdxHw/viewform"><button class="button">Le sondage</button></a>
 
       </div>
 
-      <div class="block block--2">
-        <h4 class="title title--4 title--vert">Les groupes facebook</h4>
-        <p class="text--black">J’ai cherché des groupes d’artisans sur Facebook et j’ai publié des messages à leur attention. Egalement j’ai essayé de trouver des connaissances pour leur proposer une interview.</p>
-        <span class="text-spc">x25</span>
+      <div class="block block--2 grid-start-2 block--grid">
+        <h4 class="title title--4 title--vert grid-start-1 grid-end-3">Les groupes facebook</h4>
+        <p class="text--black grid-start-1 grid-end-2">J’ai cherché des groupes d’artisans sur Facebook et j’ai publié des messages à leur attention. Egalement j’ai essayé de trouver des connaissances pour leur proposer une interview.</p>
+        <span class="text-spc grid-start-2 grid-end-4">x25</span>
         
-        <div class="block-img">
+        <div class="block-img grid-start-1 grid-end-2">
           <img class="img" src="assets/images/groupe1.jpg">
           <img class="img" src="assets/images/groupe1.jpg">
           <img class="img" src="assets/images/groupe1.jpg">
         </div>
-        <div class="block-img">
+        <div class="block-img grid-start-3 grid-end-4 ">
           <img class="img" src="assets/images/groupe1.jpg">
           <img class="img" src="assets/images/groupe1.jpg">
           <img class="img" src="assets/images/groupe1.jpg">
@@ -120,14 +120,14 @@
       
       </div>
 
-      <div class="block block--3">
+      <div class="block block--3 grid-start-2">
         <span class="text-spc text-spc--2">x15</span>
         <h4 class="title title--4 title--vert title--right title--marginbottom">Les boutiques</h4>
         <div class="block-img block-img--end">
           <img class="img img--margin" src="assets/images/groupe1.jpg">
           <img class="img" src="assets/images/groupe1.jpg">
         </div>
-        <div class="block-img">
+        <div class="block-img block-img--2">
           <img class="img" src="assets/images/groupe1.jpg">
           <img class="img" src="assets/images/groupe1.jpg">
           <img class="img" src="assets/images/groupe1.jpg">
@@ -136,6 +136,44 @@
       
       </div>
     </div>
+  </section>
+
+  <section class="container-guide">
+
+    <div class="container-guide__el">
+      <div class="container__flex-lien">
+        <h2 class="title title--2 title--vert">Guide d'entretien</h2>
+      </div>
+
+      <div class="container-guide__el">
+        <h4 class="title title--4 title--black">Voici mon guide d'entretien qui ma servis de base pour les interviews.</h4>
+        <p>Légende : * = Questions reprise dans le sondage</p>
+        <h3 class="title title--3 title--vert">Présentation</h3>
+        <p>Bonjour, <br>je m’appelle Thibaut poucet je suis étudiant en 2eme à Haute école d’albert Jacquard de Namur, j’aimerais en apprendre plus sur votre métier/loisirs/passion, je vais vous poser quelques questions afin découvrir une problématique quelconque sur votre profil. Cette interview a pour but d’en savoir plus sur votre métier afin de développer un projet autour de vous. </p>
+        <p>Soyez vous même il n’y a pas de mauvaise réponse ici, Je récolte votre avis et votre ressenti personnel.</p>
+        <h3 class="title title--3 title--vert">Présentation</h3>
+        <p>Nous allons commencer à faire connaissance soyez naturelle et à l'aise.</p>
+        <p>Quelle est votre passion/sujet aujourd’hui ?</p>
+        <p>Expliquez-moi votre activité d'où elle à commencer ? *</p>
+        <p>Quel est la place de votre activité aujourd’hui dans votre vie quotidienne ?</p>
+        <h3 class="title title--3 title--vert">Question approfondie</h3>
+        <h4 class="title title--4 title--black">Découverte</h4>
+        <p>Depuis combien de temps êtes-vous en activité ?</p>
+        <p>Qu'est ce qu’il vous motive dans votre activité ? *</p>
+        <p>Pouvez-vous vous souvenir de 3 points de motivation lorsque vous vous êtes lancé ?</p>
+        <p>Pourriez-vous me donner votre définition de l’artisanat ? *</p>
+        <h4 class="title title--4 title--black">Comprendre le comportement</h4>
+        
+        <p></p>
+
+      </div>
+
+
+
+    </div>
+
+
+
   </section>
 
   <div id="sondage">
@@ -381,6 +419,30 @@
     </div>
     </div>
 
+    <div class="container__interview-button">
+      <h4 class="title title--4">Toutes les documents des analyses des interviews</h4>
+      <button id="inter" class="button button--big">Les interviews</button>
+    </div>
+
+  </section>
+
+  
+  <section class="container-inter-lien hidden">
+    <div class="container-inter-lien__el">
+
+      <div class="container__flex-lien">
+        <a><button id="retour-lien" class="button">Retour</button></a>
+        <h2 class="title title--2 title--black">Liste des analyses des interviewers </h2>
+      </div>
+      <div class="container__flex-lien">
+        <a><button class="button">Andy (designer créateur)</button></a>
+        <a><button class="button">Thomas (ébéniste)</button></a>
+        <a><button class="button">Carine (couturière)</button></a>
+        <a><button class="button">Véronique (fabricante de bougie)</button></a>
+        <a><button class="button">Fichiers audio</button></a>
+ 
+      </div>
+    </div>
 
   </section>
   
@@ -427,7 +489,8 @@
     </div>
 
     <div id="video" class="video-container">
-      <video id="my-video" src="/assets/images/video.mp4"></video>
+      <video id="my-video" src="/assets/images/V2.mp4"></video>
+      <div class="video-container__el">
       <div class="controls">
         <button id="play-pause-button" class="play">
           <svg class="play-icon" viewBox="0 0 24 24">
@@ -446,6 +509,7 @@
             <path d="M11 4v16l-5-5H2V9h4L11 4zm7.21 3.79L16 9.17l2.79 2.79-1.42 1.42L14.58 10l-2.79 2.79-1.42-1.42L13.17 8l-2.79-2.79 1.42-1.42L14.58 6l2.79-2.79 1.42 1.42z" />
           </svg>
         </button>
+      </div>
       </div>
     </div>
     
@@ -515,13 +579,12 @@
     <p>La recherche et la conception de ce travail ont été très enrichissantes. Le projet m'a permis d'observer l'élaboration étape par étape des recherches et des problèmes, ainsi que la découverte d'une solution. Mon hypothèse renforce l'importance croissante d'un besoin pour la communauté des artisans, que nous avions sous-estimée jusqu'à présent.</p>
     <p>Cette communauté est bien plus grande que je ne le pensais. Mon objectif était de découvrir et de confirmer un problème lié aux lieux de vente. Bien que la solution nécessite encore beaucoup de travail dans tous ses aspects, le début est prometteur et offre de nombreuses possibilités.</p>
 
-    <h3 class="title title--3 title--beige circle">Documents</h3>
+    <h3 class="title title--3 title--beige circle">Doc évolutif</h3>
 
   </div>
 
   <div class="container__end container__flex">
 
-    <a href="#video"><h3 class="title title--3">Revoir la vidéo</h3></a>
     <h4 class="title title--4 title--black">Merci à toute l'équipe DWT 🏴‍☠️ <br> ainsi que la communauté des Artisans</h4>
 
   </div>
@@ -545,7 +608,7 @@
       <p>Il est important de mettre en valeur les artisans et leurs créations.</p>
       <p>Tous ensemble encourageons à penser local et durable !</p>
 
-      <h5 class="title title--5">Texte explicatif</h5>
+      <h5 class="title title--5">Texte détaillé</h5>
       <p>Je suis convaincu qu'un jour, la méthode de production industrielle qui est actuellement dominante sur le plan économique sera repensée et transformée dans une perspective différente, qu'elle soit politique ou non. Dans cette optique, nous devons travailler davantage à exploiter les ressources de notre pays ou à collaborer étroitement avec d'autres, et à apprendre à construire nos objets ainsi que nos matériaux et à les développer, qu'il s'agisse de petites ou de grandes échelles. Pour moi, il est important d'aider et de rendre accessible à tous ceux qui partagent leurs créations et leurs objets du quotidien. Nous devons habituer la population à utiliser des matériaux recyclés, réinventés la vision du local pour qu’ils accrochent à cette idée.</p>
     </div>
     <button id="vision" class="button button--vert">Ma vision</button>
@@ -556,7 +619,7 @@
 
 <footer class="container container--footer">
 
-  <div class="container__footer container__flex">
+  <div class="container__footer container--flex">
 
     <div class="container__left">
       <h2 class="title title--2 title--black">L'artisanat</h2>
@@ -573,19 +636,20 @@
     <div class="conatiner__right">
 
       <ul class="container__list-left">
-        <li>Documentation</li>
-        <li>Vidéo</li>
-        <li>UI Kit</li>
-        <li>Crédits</li>
+        <li><a>Doc évolutif</a></li>
+        <li><a>Vidéo</a></li>
+        <li><a>UI Kit</a></li>
+        <li><a>Crédits</a></li>
+        <li><a class="credit-d">Thibault Poucet DWT 2023</a></li>
       </ul>
 
       <ul class="container__list-right">
-        <li>Rencontres</li>
-        <li>Sondage</li>
-        <li>interviews</li>
-        <li>Hypothèse</li>
-        <li>Fonctionnalité</li>
-        <li>Expérience</li>
+        <li><a>Rencontres</a></li>
+        <li><a>Sondage</a></li>
+        <li><a>interviews</a></li>
+        <li><a>Hypothèse</a></li>
+        <li><a>Fonctionnalités</a></li>
+        <li><a>Expérience</a></li>
       </ul>
     </div>
 

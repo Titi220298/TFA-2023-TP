@@ -1,5 +1,5 @@
 .video-container {
-    position: relative;
+
 
     margin-bottom: 200px;
     padding-left: 20px;
@@ -13,6 +13,10 @@
         margin-bottom: -100px;
     }
   }
+
+  .video-container__el{
+    position: relative;
+  }
   
   .controls {
     line-height: 0;
@@ -24,10 +28,13 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: -93%;
-    width: 90%;
     height: 56px;
-    background-color: var(--color-vert);
+    width: 100%;
+    bottom: -75px;
+    margin-bottom: -25px;
+    background-color: var(--color-vert-transparent);
+    backdrop-filter: blur( 10.5px );
+    -webkit-backdrop-filter: blur( 10.5px );
     border-radius: 30px;
     color: var(--color-blanc);
     text-align: center;

@@ -8,8 +8,11 @@
 @import 'components/circle-ui';
 @import 'components/video';
 @import 'components/media-1024px';
+@import 'components/_div-interview-lien';
+@import 'components/_div-guide-entretien';
 /* Theme */
-  
+
+
 a{
     text-decoration: none;
     color: var(--color-blanc);
@@ -23,7 +26,9 @@ a{
 [data-theme="ligth"]{
     --color-blanc: rgb(255, 255, 255);
     --color-noir: rgb(27, 27, 27);
+    --color-noir-transparent: rgba(27, 27, 27, 0.651);
     --color-vert: #1C5F3E;
+    --color-vert-transparent: #1c5f3ec8;
     --color-beige: #EEE0D3;
     --color-rouille: #CB6E4F;
 }
@@ -43,62 +48,6 @@ a{
 .container--darkmode{
     display: flex;
     justify-content: end;
-}
-
-.img{
-    width: 70px;
-    margin-top: 16px;
-
-    &--margin{
-        margin-right: 16px;
-    }
-}
-
-.block-img{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    &--end{
-        justify-content: end;
-        row-gap: 20px;
-    }
-
-}
-
-.block{
-
-    background-image: url("../assets/images/el-graphic-white.png");
-    background-position: top -140px right -120px;
-    background-size: contain;
-    background-repeat: no-repeat;
-
-    margin-top: 50px;
-    max-width: 500px;
-    padding: 20px 25px 20px 25px;
-    background-color: var(--color-vert);
-    border-radius: 15px;
-
-    &--2{
-
-        background-image: url("../assets/images/el-graphic-green.png");
-        background-position: top -50px left 50px;
-        background-size: cover;
-
-        background-color: var(--color-beige);
-    }
-
-    &--3{
-
-        display: flex;
-        flex-direction: column;
-        background-image: url("../assets/images/el-graphic-green.png");
-        background-position: top -50px left 50px;
-        background-size: cover;
-
-        background-color: var(--color-beige);
-    }
-
 }
 
 
@@ -145,30 +94,6 @@ a{
 
 
 @media (min-width: 1024px){
-
-    .block{
-
-        background-image: url("../assets/images/el-graphic-white.png");
-        background-position: top -250px right -200px;
-        background-size: contain;
-        background-repeat: no-repeat;
-    
-        margin-top: 100px;
-        max-width: 500px;
-        padding: 40px 50px 40px 50px;
-        background-color: var(--color-vert);
-        border-radius: 30px;
-
-        &--2{
-
-            background-image: url("../assets/images/el-graphic-white.png");
-            background-position: top -250px right -200px;
-            background-size: contain;
-
-            background-color: var(--color-beige);
-        }
-    
-    }
 
     .list{
         margin: 0;

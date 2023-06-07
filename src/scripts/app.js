@@ -26,6 +26,24 @@ croix.addEventListener('click', () => {
   list.classList.add('hidden-nav');
 });
 
+//interview lien
+
+const body = document.querySelector("body");
+const inter = document.querySelector("#inter");
+const retour = document.querySelector("#retour-lien");
+const lien = document.querySelector(".container-inter-lien");
+
+inter.addEventListener('click', () => {
+  lien.classList.remove("hidden");
+  body.classList.add('noscroll');
+});
+
+retour.addEventListener('click', () => {
+  lien.classList.add("hidden");
+  body.classList.remove('noscroll');
+});
+
+
 //observeur
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -262,7 +280,7 @@ function isMouseOverControls(event) {
 
 ScrollTrigger.create({
   trigger: videoContainer,
-  start: "top-=120px top", // Détecte lorsque le haut du conteneur vidéo atteint le bas de la fenêtre
+  start: "top-=150px top", // Détecte lorsque le haut du conteneur vidéo atteint le bas de la fenêtre
   end: "bottom top",
   markers: true,
   onEnter: function() {
