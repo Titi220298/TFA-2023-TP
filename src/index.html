@@ -72,7 +72,7 @@
 
 </nav>
 
-<body data-theme="ligth" class="noscroll">
+<body data-theme="ligth" class="">
   <section class="container-titre">
     <div class="container-titre__el">
       <h4 class="title title--4">Une solution pour les artisans créateurs pour répondre plusieurs problèmes ?</h4>
@@ -262,7 +262,7 @@
     
     </div>
     <div class="">
-      <button class="button button--big">Voir les réponses du sondage</button>
+      <button id="sondage-button"class="button button--big">Voir les réponses du sondage</button>
     </div>
 
     <div id="text-container3">
@@ -304,25 +304,36 @@
     </div>
   </section>
 
-  <section class="container-table">
+  <section class="container-table hidden">
     <div class="container-table__flex">
-      <button id="table-retour">retour</button>
+      <button class="button button--retour"id="table-retour">retour</button>
       <h3 class="title title--3">Tableau des réponse du sondage</h3>
     </div>
-    <div class="container-table__flex">
-    <button id="tous" class="active-table">Tous</button>
-    <button id="economie">économie</button>
-    <button id="probleme">Problème</button>
-    <button id="ressentis">Ressentis</button>
-    <button id="vente">Vente</button>
-    <button id="solution">solution</button>
+    <div class="container-table__button">
+      <button id="tous" class="active-table">Tous</button>
+      <button id="economie">économie</button>
+      <button id="probleme">Problème</button>
+      <button id="ressentis">Ressentis</button>
+      <button id="vente">Vente</button>
+      <button id="solution">solution</button>
     </div>
 
     <div class="flex">
-    <button id="button-détails1" class="button-details">Réponse 1</button>
-    <button id="button-détails2" class="button-details">Réponse 2</button>
+      <button id="button-détails1" class="button-details active-réponse">Réponse&nbsp1</button>
+      <button id="button-détails2" class="button-details">2</button>
+      <button id="button-détails3" class="button-details">3</button>
+      <button id="button-détails4" class="button-details">4</button>
+      <button id="button-détails5" class="button-details">5</button>
+      <button id="button-détails6" class="button-details">6</button>
+      <button id="button-détails7" class="button-details">7</button>
+      <button id="button-détails8" class="button-details">8</button>
+      <button id="button-détails9" class="button-details">9</button>
+      <button id="button-détails10" class="button-details">10</button>
+      <button id="button-détails11" class="button-details">11</button>
+      <button id="button-détails12" class="button-details">12</button>
+      <button id="button-détails13" class="button-details">13</button>
     </div>
-    <div id="1" class="details">
+    <div class="details">
       <div class="table1">
         <div class="question">
           <div class="cell ressentis ">Expliquez-moi votre activité, d'où elle a commencé ?</div>
@@ -345,10 +356,10 @@
           <div class="cell solution ">Pensez-vous qu’il y a trop de e-commerce ?</div>
           <div class="cell solution ">Si vous aviez une baguette magique, quelle solution auriez-vous besoin maintenant ?</div>
         </div>
-        <div class="reponse-table">
+        <div id="1" class="reponse-table">
           <div class="cell ressentis">Créations de déco et de souvenirs. J'ai commencé à faire pour moi, puis ma famille, puis mes amis. Et j'ai démarré mon entreprise quand leurs amis commençaient à me contacter.</div>
           <div class="cell ressentis">Les encouragements et les retours de mes clients.</div>
-          <div class="cell ressentis"></div>
+          <div class="cell ressentis">Pas de réponse</div>
           <div class="cell ressentis">Tous les jours</div>
           <div class="cell probleme">La concurrence déloyale (Personnes non déclarées; qui utilisent illégalement la notoriété des licences; ou encore qui utilisent des matériaux de mauvaise qualité pour baisser leurs prix...)</div>
           <div class="cell probleme">La communication entre les artisans</div>
@@ -366,53 +377,268 @@
           <div class="cell solution">Oui</div>
           <div class="cell solution">Un espace plus grand :D</div>
         </div>
+        <div id="2" class="reponse-table reponse-table--hidden">
+          <div class="cell ressentis">Je crée des luminaires et des nichoirs dans des courges (calebasses)</div>
+          <div class="cell ressentis">Le dépassement de soi, j'essaie de faire mieux et plus compliqué à chaque nouvelle création</div>
+          <div class="cell ressentis">Le travail dans une passion</div>
+          <div class="cell ressentis">Pas assez, il me faudrait un minimum de 30 heures/semaine</div>
+          <div class="cell probleme">L'usure des articulations et l'inflammation des tendons</div>
+          <div class="cell probleme">Le manque d'engouement du public</div>
+          <div class="cell probleme">Peu de reconnaissance des autorités, manque de temps et manque de revenus</div>
+          <div class="cell probleme">Des organisateurs trop motivés par leur propre rentabilité</div>
+          <div class="cell economie">Bof</div>
+          <div class="cell ressentis">Non</div>
+          <div class="cell solution">Réseaux sociaux, site internet, variété de lieu d'exposition</div>
+          <div class="cell vente">Pour l'instant, trop peu de retour</div>
+          <div class="cell economie">pas de réponse</div>
+          <div class="cell vente">Non, il est déjà difficile de rentabiliser notre activité pour y laisser 25% aux boutiques qui veulent bien accueillir nos créations</div>
+          <div class="cell probleme">Non j'arrive à gérer</div>
+          <div class="cell vente">Le contact avec le public, le partage de ma passion</div>
+          <div class="cell probleme">L'attachement que j'ai avec mes créations</div>
+          <div class="cell solution">C'est devenu compliqué de se faire remarquer</div>
+          <div class="cell solution">Arriver à faire comprendre aux gens la différence entre la grande production et l'artisanat</div>
+        </div> 
+        <div id="3" class="reponse-table reponse-table--hidden">
+          <div class="cell ressentis">Créations de personnages en terre cuite, grâce à une passion et des découvertes, des recherches</div>
+          <div class="cell ressentis">Ma passion</div>
+          <div class="cell ressentis">L'artisanat est la création d'objets, choses, fait mains non industriel.</div>
+          <div class="cell ressentis">De 3 à 6h</div>
+          <div class="cell probleme">Se faire connaître, avoir une clientèle fidèle.</div>
+          <div class="cell probleme">Le public cible réstrin, un style bien défini.</div>
+          <div class="cell probleme">Le coût, la fragilité, le transport</div>
+          <div class="cell probleme">Des commandes frauduleuses, faux compte,etc</div>
+          <div class="cell economie">Tout va bien</div>
+          <div class="cell ressentis">Oui</div>
+          <div class="cell solution">Les réseaux sociaux, les contacts réels</div>
+          <div class="cell vente">Le temps de production, les livraisons</div>
+          <div class="cell economie">Oui</div>
+          <div class="cell vente">Oui, les clients seraient à même de venir acheter sur place et toucher peut-être une plus grande partie du public.</div>
+          <div class="cell probleme">Je peux prendre du retard</div>
+          <div class="cell vente">Satisfaire le client et voir que ça lui plais</div>
+          <div class="cell probleme">La mise en vente de mes produits</div>
+          <div class="cell solution">Non</div>
+          <div class="cell solution">Se faire connaître</div>
+        </div> 
+        <div id="4" class="reponse-table reponse-table--hidden">
+          <div class="cell ressentis">De passions et d envies laissées dans une armoire trop longtemps ;-) un jour différent des autres je me suis lancée ;-)</div>
+          <div class="cell ressentis">Les retours de mes clients</div>
+          <div class="cell ressentis">L artisanat c est l amour que l on dépose dans chacune de nos réalisations</div>
+          <div class="cell ressentis">7 a 8 h semaine</div>
+          <div class="cell probleme">Je n ai pas assez de temps ( activité complémentaire à côté d un emploi temps plein)</div>
+          <div class="cell probleme">Le manque de temps , le coût des matières premières et les prix exorbitants demandés par certains organisateurs de marchés</div>
+          <div class="cell probleme">Le côté financier</div>
+          <div class="cell probleme">Les marchés de Noël 2022 qui ont été catastrophiques</div>
+          <div class="cell economie">Bof</div>
+          <div class="cell ressentis">Non</div>
+          <div class="cell solution">Facebook</div>
+          <div class="cell vente">L'absence de contacts humains</div>
+          <div class="cell economie">Non, c'est trop chers, A voir la rentabilité avec mes produits</div>
+          <div class="cell vente">Oui  pour le contact humain</div>
+          <div class="cell probleme">Non j'arrive à gérer</div>
+          <div class="cell vente">Le contact humain</div>
+          <div class="cell probleme">Établir un juste prix</div>
+          <div class="cell solution">Oui</div>
+          <div class="cell solution">Des journées de 48 h</div>
+        </div>
+        <div id="5" class="reponse-table reponse-table--hidden">
+          <div class="cell ressentis">Créations de couture,  crochet, tricot. Trousses, sacs, vêtements et accessoires enfants et femmes essentiellement.  Pour la maison aussi  comme des serviettes,  des tentures etc... autodidacte par hobby puis j ai fait 1 an de formation en couture pour me perfectionner.</div>
+          <div class="cell ressentis">C est ma bulle,  ma passion.  Créer,  apporter ma touche personnelle...</div>
+          <div class="cell ressentis">Des produits faits avec amour et passion, parfois imparfaits mais uniques et ayant une valeur inestimable en sachant les heures passées sur ces objets. La beauté du travail bien fait,  la recherche du détail qui fait la différence,  les produits travaillés et un résultat d une qualité supérieure.</div>
+          <div class="cell ressentis">Je ne compte pas les heures...</div>
+          <div class="cell probleme">Trop d offre, trop de "couturières en herbe" et difficile à avancer,  à percer. Puis j ai un travail à temps plein à côté et parfois pas le temps de créer mais j y arrive toujours...</div>
+          <div class="cell probleme">Idem réponse ci dessus.  Trop de pages de coutures sur les réseaux,   pas assez de temps , pas assez de pub des gens que je connais</div>
+          <div class="cell probleme">Trop de concurrence,  de "bricoleuses" en ligne</div>
+          <div class="cell probleme">Marché artisanal : beaucoup d intéressés mais peu d acheteurs</div>
+          <div class="cell economie">Je n en vis pas heureusement</div>
+          <div class="cell ressentis">Non du tout, et encore une fois, + un hobby,  je n en vis pas, mais je plainds les gens qui essaient de sauver leur petite entreprise</div>
+          <div class="cell solution">Les réseaux sociaux,  Instagram,  Facebook et des organisations de marchés artisanaux</div>
+          <div class="cell vente">Il faut souvent payer pour créer un site de renommée</div>
+          <div class="cell economie">A voir la rentabilité avec mes produits</div>
+          <div class="cell vente">Jamais essayé</div>
+          <div class="cell probleme">Non j'arrive à gérer</div>
+          <div class="cell vente">Le retour positif des clientes, la fierté de mon produit,  qu il fasse plaisir</div>
+          <div class="cell probleme">Peut-être livrer dans les temps donnés mais pas eu de complication</div>
+          <div class="cell solution">C'est devenu compliqué de se faire remarquer</div>
+          <div class="cell solution">Qu on reconnaisse ma marque et percer dans ma passion</div>
+        </div>
+        <div id="6" class="reponse-table reponse-table--hidden">
+          <div class="cell ressentis">Je fabrique des bougies parfumées vegan, elle a commencé d’une prise de conscience de la toxicité des bougies</div>
+          <div class="cell ressentis">La passion</div>
+          <div class="cell ressentis">C’est fabriquer ou créer manuellement avec un savoir-faire spécifique, de la créativité, de la passion</div>
+          <div class="cell ressentis">10 par semaine</div>
+          <div class="cell probleme">Trouver des marchés artisanaux où exposer</div>
+          <div class="cell probleme">Le manque de temps et d’argent pour investir</div>
+          <div class="cell probleme">Difficultés de trouver où exposer, rupture de stock des matières premières, augmentation des prix</div>
+          <div class="cell probleme">Voir qu’une personne copiait mes idées</div>
+          <div class="cell economie">Bof</div>
+          <div class="cell ressentis">Non, pas du tout</div>
+          <div class="cell solution">Réseaux sociaux, salons d’artisans</div>
+          <div class="cell vente">Les envois, livraison</div>
+          <div class="cell economie">Oui</div>
+          <div class="cell vente">Oui pour la visibilité, non pour les marges</div>
+          <div class="cell probleme">Je ne fais pas encore d’envois</div>
+          <div class="cell vente">Qu’il me plaise</div>
+          <div class="cell probleme">L’arrivée en retard des matières premières</div>
+          <div class="cell solution">Non</div>
+          <div class="cell solution">M’aider pour la mise en route d’un site internet via wordpress et pour la logistique (envois)</div>
+        </div>
+        <div id="7" class="reponse-table reponse-table--hidden">
+          <div class="cell ressentis">Artiste peintre et techniques mixtes dont créations d’objets avec la récup de mes chiffons d atelier…up cycling (photophores et suspensions céramiques - tissus et boules de Noël…donc un peu d’artisanat aussi</div>
+          <div class="cell ressentis">Ma passion- c’est vital…c’est mon exutoire…je suis indépendante complémentaire et pour moi c est mon plaisir….me retrouver avec mon atelier…mes créations et après les présenter au public</div>
+          <div class="cell ressentis">Voir 1ere question</div>
+          <div class="cell ressentis">Pas assez à mon goût…car je travaille à côté et la vie du quotidien qui demande du temps …le temps passé à l atelier est aléatoire …selon les salons …marchés de Noël expos</div>
+          <div class="cell probleme">Administratif</div>
+          <div class="cell probleme">Le temps …mais on s ´adapte et c est un métier où on est en progression continue</div>
+          <div class="cell probleme">Non</div>
+          <div class="cell probleme">La sélection à certains salons pas tjs objective ou  onéreuse</div>
+          <div class="cell economie">Je n’en tire pas vraiment un salaire….mais ça me permet de créer sans impacter le budget familial</div>
+          <div class="cell ressentis">Bof</div>
+          <div class="cell solution">Facebook Instagram …site internet (un peu fastidieux et demande du temps supplémentaire)</div>
+          <div class="cell vente">J aimerais me lancer …mais il faut encore que je me renseigne pour les frais de port …les mentions légales et c’est très chronophage</div>
+          <div class="cell economie">Pas pour le moment</div>
+          <div class="cell vente">Oui…je le fais ponctuellement dans deux boutiques de ma ville et là je vais avoir un point de ventes au musée de ma ville</div>
+          <div class="cell probleme">Je ne le fais pas encore…en ligne sinon c est toujours vente directe ou réservation et livraison avec rdv</div>
+          <div class="cell vente">Le plaisir des gens qui m achètent une pièce</div>
+          <div class="cell probleme">Voir partir ma création …ce sont mes tripes…mon âme…les exposer étaient déjà une mise à nu</div>
+          <div class="cell solution">Oui</div>
+          <div class="cell solution">Du temps libre pour créer et présenter mon travail…</div>
+        </div>
+        <div id="8" class="reponse-table reponse-table--hidden">
+          <div class="cell ressentis">Je suis tisanière et floricultrice. J'avais envie docteur une herboristerie et de proposer des plantes médicinales dont je pouvais m'assurer des qualités. Du coup, je me suis lancée en tisanerie. Les fleurs sont venus complétés mon activité</div>
+          <div class="cell ressentis">La joie de récolter et la qualité des produits finis</div>
+          <div class="cell ressentis">L'exercice d'une activité de production ou de création axée sur le savoir faire.</div>
+          <div class="cell ressentis">A titre complémentaire actuellement, 1 à 2 jour semaine</div>
+          <div class="cell probleme">La difficulté de valoriser pecunierement un produit pour lequel les gens ont comme comparatif des produits du supermarché, tout en voulant me montrer accessible pour permettre à chacun de se soigner autrement</div>
+          <div class="cell probleme">Le temps. Financièrement je ne peux pas auriez mon activité principale hors j'ai débuté en 2022 et il va me falloir encore du temps pour développer avant d'espérer pouvoir en vivre</div>
+          <div class="cell probleme">Le travail solitaire, des besoins en équipements qui pourraient être mutualisé, la difficulté de trouver des produit en petite série (type impression) adapté à ma petite production</div>
+          <div class="cell probleme">Ne pas avoir pu produire à temps pour des moments de fête faute de temps</div>
+          <div class="cell economie">En activité complémentaire donc pour l'instant je compense</div>
+          <div class="cell ressentis">Non. Si je veux effectuer ma transition pour devenir indépendante, je n'ai pas dire au statut tremplin car j'ai un cdi. Je suis donc coincée malgré moi</div>
+          <div class="cell solution">Fb, instagram</div>
+          <div class="cell vente">J'ai envie d'offrir un produit local</div>
+          <div class="cell economie">Pas réaliste actuellement. Ni financièrement ni en terme d'organisation de temps et temps nécessaire à la production. Idéalement, il me faudrait un système où nous serons plusieurs artisans a nous relayer</div>
+          <div class="cell vente">Oui. Malgré la marge</div>
+          <div class="cell probleme">Je peux prendre du retard</div>
+          <div class="cell vente">Faire comprendre la différence avec les produits du supermarché</div>
+          <div class="cell probleme">La gestion des livraisons</div>
+          <div class="cell solution">Oui</div>
+          <div class="cell solution">Un tiers lieu avec un espace de vente commun</div>
+        </div>
+        <div id="9" class="reponse-table reponse-table--hidden">
+          <div class="cell ressentis">Je couds des trousses avec des tissus de récupération, tissus brocante, tissus vintage, je tricote des pulls enfants, je fabrique des colliers papillons, je fabrique des boucles d'oreille dream catcher.</div>
+          <div class="cell ressentis">Moteur interne. Passion, plaisir.</div>
+          <div class="cell ressentis">Faire avec ses petites mains des jolies choses utiles, dans des matériaux nobles.</div>
+          <div class="cell ressentis">Incalculable</div>
+          <div class="cell probleme">Il faut vendre en noir, car vendre déclaré est vendre à perte quasiment. Déclarer c'est perdre les miettes de bénéfices. Si je dois compter mes heures je travaille à 1 ou 2€ de l'heure.</div>
+          <div class="cell probleme">Lieu pour déposer les créations qui demande de déclarer et qui veut prendre une commission, c'est impossible. La seule manière de vendre les créations c'est en direct lors de marchés d'artisans.</div>
+          <div class="cell probleme">Déclarer les ventes, être taxé sur ses créations artisanales c'est impensable, donner une commission à un vendeur intermédiaire c'est impensable.</div>
+          <div class="cell probleme">Le coiffeur qui me prenait des créations en dépôt et qui prenait une toute petite marge de bénéfice (25€ la vente d'une trousse, il me donnait 22€) à pris sa pension.</div>
+          <div class="cell economie">Je gagne ma vie avec un autre job.</div>
+          <div class="cell ressentis">Absolument pas. L'état ne devrait pas taxer l'artisanat.</div>
+          <div class="cell solution">FB et instagram</div>
+          <div class="cell vente">E-shop trop cher, j'ai arrêté. Etsy c'est la dictature, j'ai supprimé ma boutique.</div>
+          <div class="cell economie">Non, c'est trop chers</div>
+          <div class="cell vente">Non, ils veulent déclarer les ventes et prendre une trop grosse commission, ou alors il faut donner des heures de travail mais cela ne m'intéresse pas.</div>
+          <div class="cell probleme">Non j'arrive à gérer</div>
+          <div class="cell vente">Changer les mentalités pour que les gens arrêtent de payer bon marché des produits chinois.</div>
+          <div class="cell probleme">Aucune difficulté pour mettre en vente en ligne.</div>
+          <div class="cell solution">C'est devenu compliqué de se faire remarquer</div>
+          <div class="cell solution">Pouvoir mettre en dépôt dans un magasin sans déclarer et en payant juste une mini commission au vendeur.</div>
+      </div>
+      <div id="10" class="reponse-table reponse-table--hidden">
+        <div class="cell ressentis">Couture zéro déchet et couture bébé et enfants. Elle a commencé il y a 3 ans</div>
+        <div class="cell ressentis">Ça me fait oublier les douleurs de ma fibro myalgie</div>
+        <div class="cell ressentis">Ce sont des créations uniques</div>
+        <div class="cell ressentis">10h par semaine</div>
+        <div class="cell probleme">Les périodes creusent</div>
+        <div class="cell probleme">Les périodes creusent</div>
+        <div class="cell probleme">Non</div>
+        <div class="cell probleme">Le manque de respect de certains clients</div>
+        <div class="cell economie">Tout va bien</div>
+        <div class="cell ressentis">Non</div>
+        <div class="cell solution">Facebook et les marchés artisanaux</div>
+        <div class="cell vente">J’ai un webshop et je n’ai jamais rien vendu avec les gens préfères le contact</div>
+        <div class="cell economie">Non, c'est trop chers</div>
+        <div class="cell vente">Oui c’est une visibilité</div>
+        <div class="cell probleme">Non j'arrive à gérer</div>
+        <div class="cell vente">Le contact physique</div>
+        <div class="cell probleme">La gestion des commandes</div>
+        <div class="cell solution">Oui</div>
+        <div class="cell solution">Un peu plus de ventes pour pouvoir avoir un peu plus d’argent sur mon compte</div>
+      </div>
+      <div id="11" class="reponse-table reponse-table--hidden">
+        <div class="cell ressentis">Par un hobby !</div>
+        <div class="cell ressentis">Le retour des gens et de mes proches</div>
+        <div class="cell ressentis">Une passion qui devient une expertise</div>
+        <div class="cell ressentis">1 à 2h/jour</div>
+        <div class="cell probleme">Difficulté pour se faire connaître/voir, matière première chère (résine epoxy)</div>
+        <div class="cell probleme">Difficulté pour se faire connaître/voir</div>
+        <div class="cell probleme">Beaucoup de travail souvent pour rien, gens peu enclins à dépenser, "roulette russe" des marchés pour la rentabilité</div>
+        <div class="cell probleme">aucun visiteur sur les marchés parce que pas de com !</div>
+        <div class="cell economie">je suis salariée à côté, heureusement</div>
+        <div class="cell ressentis">Pas de réponse</div>
+        <div class="cell solution">FB, Etsy, IG</div>
+        <div class="cell vente">la difficulté de se faire connaître et la gourmandise des markets place</div>
+        <div class="cell economie">Non, c'est trop chers</div>
+        <div class="cell vente">Oh oui ! Beaucoup de ventes par ce biais, mais difficulté à en trouver.</div>
+        <div class="cell probleme">Non j'arrive à gérer</div>
+        <div class="cell vente">La satisfaction de ma clientèle et le bouche à oreille qu'il en découle</div>
+        <div class="cell probleme">La complexité administrative pour vendre à l'étranger. du coup je ne vends qu'en France ....</div>
+        <div class="cell solution">C'est devenu compliqué de se faire remarquer</div>
+        <div class="cell solution">Que ma popularité explose !</div>
+      </div>
+      <div id="12" class="reponse-table reponse-table--hidden">
+        <div class="cell ressentis">Couture. J’ai récupéré la machine à coudre de ma grand-mère et j’ai fait des doudous pour mes enfants. Depuis je n’arrête plus.</div>
+        <div class="cell ressentis">Le plaisir de créer et la satisfaction de mes clients</div>
+        <div class="cell ressentis">Du fait main, du local. Fait avec amour, passion et maîtrise. Produit de qualité</div>
+        <div class="cell ressentis">Un peu plus qu’un mi-temps (c’est mon deuxième boulot)</div>
+        <div class="cell probleme">Difficile de se faire connaître et de se démarquer des autres. La comparaison erronées des clients avec ce qu’ils trouvent en grande surface à des prix moindres. Concurrence avec les « artisans » non déclarés qui font des prix bas.</div>
+        <div class="cell probleme">Les prix élevés des fournitures. Les fournisseurs ne font pas de prix pour les petits artisans, on doit d’office acheter par grosse quantité ce qui est impossible si la clientèle ne suit pas. Par exemple, dans une grosse enseigne de tissu j’ai le même tarif que les autres clients alors que je suis indépendante. C’est donc difficile de proposer des prix attractifs.</div>
+        <div class="cell probleme">- L’administratif (factures, inventaire, devis…) - Le temps et l’énergie que l’on passe à se faire connaître, à faire de la publicité. - Justifier ses prix</div>
+        <div class="cell probleme">Expliquer à ma cliente mes prix et lui faire comprendre que je ne sais pas les diminuer sinon je travaille à perte.</div>
+        <div class="cell economie">J'ai difficille</div>
+        <div class="cell ressentis">Non</div>
+        <div class="cell solution">J’ai une page Facebook et un site Internet. Je dépose également des cartes de visite dans les commerces.</div>
+        <div class="cell vente">Gérer le site.</div>
+        <div class="cell economie">A voir la rentabilité avec mes produits</div>
+        <div class="cell vente">Oui. Ça apporte de la visibilité</div>
+        <div class="cell probleme">Non j'arrive à gérer, Je perds beaucoup de temps</div>
+        <div class="cell vente">Qu’ils se démarquent, qu’on remarque le côté unique et fait main.</div>
+        <div class="cell probleme">Pas de réponse</div>
+        <div class="cell solution">Oui</div>
+        <div class="cell solution">Être connue d’un maximum de gens et reconnue pour mon travail.</div>
+      </div>
+      <div id="13" class="reponse-table reponse-table--hidden">
+        <div class="cell ressentis">Je fabrique des bougies. J’ai commencé à faire ça il y a 5 ans pour moi dans des contenants recup et vintage et puis l’idée a germer d’en faire en plus grosse quantité, dans des contenants identiques.</div>
+        <div class="cell ressentis">Les retours hyper positifs des clients. Les personnes qui recommandent à chaque fois. Créer des nouveautés. Faire de jolies photos. Créer tout un univers qui me ressemble.</div>
+        <div class="cell ressentis">C’est fabriquer quelque chose soi même et prendre le temps de le faire.</div>
+        <div class="cell ressentis">Je travaille tous les jours dessus</div>
+        <div class="cell probleme">La bougie est un produit saisonnier. Je me retrouve donc débordée de travail de dételante au décembre et le reste de l’année c’est beaucoup plus calme. Il faut donc trouver des idées pour s’en sortir financier pendant ces mois la</div>
+        <div class="cell probleme">Le manque d’argent parfois</div>
+        <div class="cell probleme">Parfois le côté un peu « à la chaîne » mais ça c’est vraiment quand je suis débordée car j’aime encore bien le reste du temps. Et sinon c’est toutes les contraintes d’un indépendants et les frais liés. Dès qu on veut se verser un peu plus d’argent, on est taxés, nos cotisations sociales augmentent.. etc.</div>
+        <div class="cell probleme">J’ai bossé sur la saint Valentin bien à l’avance pour proposer de chouettes choses et au final je n’ai pas eu beaucoup plus de ventes que d’habitude !</div>
+        <div class="cell economie">Bof</div>
+        <div class="cell ressentis">Pas du tout</div>
+        <div class="cell solution">Instagram</div>
+        <div class="cell vente">Le seul point négatif c’est le fait que parfois les colis sont endommagés et donc je dois renvoyer des bougies. C’est rare mais ça arrive. Et en ligne, on ne peut pas faire de cash, ce qui parfois pourrait aider de se mettre un peu de sous en poche (sans devoir le déclarer)</div>
+        <div class="cell economie">Oui</div>
+        <div class="cell vente">Oui clairement. Les gens peuvent sentir les bougies et ceux qui ne me connaissaient pas me trouvent par hasard</div>
+        <div class="cell probleme">Non j'arrive à gérer</div>
+        <div class="cell vente">Attirer le client</div>
+        <div class="cell probleme">Aucune</div>
+        <div class="cell solution">Non</div>
+        <div class="cell solution">Attirer plus de clients</div>
+    </div>
+    
+    
+    
+    
+      
+      
+      
+      
       </div>
     </div>
-    <div id="1" class="details hidden">
-      <div class="table1">
-        <div class="question">
-          <div class="cell ressentis ">Expliquez-moi votre activité, d'où elle a commencé ?</div>
-          <div class="cell ressentis ">Qu'est-ce qui vous donne de l'énergie pour exercer votre activité ?</div>
-          <div class="cell ressentis ">Pourriez-vous me donner votre définition de l’artisanat ?</div>
-          <div class="cell ressentis ">Combien de temps passez-vous sur votre activité ?</div>
-          <div class="cell probleme ">Quelle problématique rencontrez-vous dans votre activité ?</div>
-          <div class="cell probleme ">Quels sont les obstacles qui vous empêchent de progresser dans votre métier ?</div>
-          <div class="cell probleme ">Y a-t-il des aspects négatifs de votre métier/passion qui vous pèsent ? Si oui, pouvez-vous en citer trois ?</div>
-          <div class="cell probleme ">Votre dernière frustration à cause de activité c'était pourquoi ?</div>
-          <div class="cell economie ">Financièrement tout se passe bien ?</div>
-          <div class="cell ressentis ">Dans l’état actuel, pensez être soutenus suffisamment par l’état, organisation, etc.. ?</div>
-          <div class="cell solution ">Quels canaux de communication utilisez-vous pour vous faire connaître en tant qu'artisan/créateur ?</div>
-          <div class="cell vente ">Si vous deviez vendre en ligne (ou si vous le faites), quels seraient les points négatifs pour vous ?</div>
-          <div class="cell economie ">Une location d'un espace physique pour un montant compris entre 50 et 200 euros par mois serait envisageable pour vous ?</div>
-          <div class="cell vente ">Vendre dans des magasins physiques est un avantage pour vous ?</div>
-          <div class="cell probleme ">Vous rencontrez des problèmes dans la logistique et la livraison de vos produits ? </div>
-          <div class="cell vente ">Quel est l’élément le plus important pour vous dans la vente de vos produits ?</div>
-          <div class="cell probleme ">Quelles difficultés avez-vous rencontrées lors de votre première vente ou mise en vente ?</div>
-          <div class="cell solution ">Pensez-vous qu’il y a trop de e-commerce ?</div>
-          <div class="cell solution ">Si vous aviez une baguette magique, quelle solution auriez-vous besoin maintenant ?</div>
-        </div>
-        <div class="reponse-table">
-          <div class="cell ressentis">Créations de déco et de souvenirs. J'ai commencé à faire pour moi, puis ma famille, puis mes amis. Et j'ai démarré mon entreprise quand leurs amis commençaient à me contacter.</div>
-          <div class="cell ressentis">Les encouragements et les retours de mes clients.</div>
-          <div class="cell ressentis"></div>
-          <div class="cell ressentis">Tous les jours</div>
-          <div class="cell probleme">La concurrence déloyale (Personnes non déclarées; qui utilisent illégalement la notoriété des licences; ou encore qui utilisent des matériaux de mauvaise qualité pour baisser leurs prix...)</div>
-          <div class="cell probleme">La communication entre les artisans</div>
-          <div class="cell probleme">Le temps que ça prend / Les charges / La solitude face à certains projets</div>
-          <div class="cell probleme">Je ne m'en rappelle plus... Peut-être lors de mon dernier marché d'artisans où l'on était mélangé avec des particuliers et des non-déclarés...</div>
-          <div class="cell economie">Ca se passe bien</div>
-          <div class="cell ressentis">Non</div>
-          <div class="cell solution">Réseau / Marché / Partenariat</div>
-          <div class="cell vente">Les frais</div>
-          <div class="cell economie"></div>
-          <div class="cell vente">Oui</div>
-          <div class="cell probleme">Non j'arrive à gérer</div>
-          <div class="cell vente">Un client satisfait</div>
-          <div class="cell probleme">Rien ou je ne m'en rappelle plus...</div>
-          <div class="cell solution">Oui</div>
-          <div class="cell solution">Un espace plus grand :D</div>
-        </div>
-      </div>
     </div>
   </section>
 

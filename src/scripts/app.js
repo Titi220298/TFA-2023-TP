@@ -59,6 +59,22 @@ retourguide.addEventListener('click', () => {
   body.classList.remove('noscroll');
 });
 
+//button table
+
+const buttonsondage = document.querySelector("#sondage-button");
+const table = document.querySelector(".container-table");
+const retoursondage = document.querySelector("#table-retour");
+
+buttonsondage.addEventListener('click', () => {
+  table.classList.remove("hidden");
+  body.classList.add('noscroll');
+});
+
+retoursondage.addEventListener('click', () => {
+  table.classList.add("hidden");
+  body.classList.remove('noscroll');
+});
+
 
 //observeur
 
@@ -111,6 +127,7 @@ vision.addEventListener('click', () => {
     vision.innerHTML = 'Ma vision';
   }
 });
+
 
 
 
@@ -374,7 +391,7 @@ if(darkTheme){
 //table
 
 // Sélection des boutons
-let buttons = document.querySelectorAll('.container-table__flex button');
+let buttons = document.querySelectorAll('.container-table__button button');
 
 // Sélection des éléments div contenant des questions et réponses
 let questions = document.querySelectorAll('.question .cell');
@@ -418,4 +435,47 @@ buttons.forEach(button => {
         applyClasses(e.target.id);
     });
 });
+
+
+// reponse button
+
+
+window.onload = function () {
+  var buttons = document.querySelectorAll('.button-details');
+  
+  // Active le bouton 'button-détails1' par défaut au chargement de la page
+  var defaultButton = document.getElementById('button-détails1');
+  defaultButton.classList.add('active-réponse');
+  
+  for (let i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener('click', function () {
+          // Si le bouton cliqué est déjà actif, ne fait rien
+          if (this.classList.contains('active-réponse')) {
+              return;
+          }
+
+          // Retire la classe 'active-réponse' de tous les boutons
+          buttons.forEach(button => {
+              button.classList.remove('active-réponse');
+          });
+
+          // Ajoute la classe 'active-réponse' au bouton cliqué
+          this.classList.add('active-réponse');
+
+          // Récupère le numéro du bouton cliqué à partir de l'id du bouton
+          var buttonNumber = this.id.split('button-détails')[1];
+
+          // Cache toutes les div en ajoutant 'reponse-table--hidden'
+          var allDivs = document.querySelectorAll('.reponse-table');
+          for (let j = 0; j < allDivs.length; j++) {
+              allDivs[j].classList.add('reponse-table--hidden');
+          }
+
+          // Affiche la div correspondante en retirant 'reponse-table--hidden'
+          var divToShow = document.getElementById(buttonNumber);
+          divToShow.classList.remove('reponse-table--hidden');
+      });
+  }
+};
+
 

@@ -1,14 +1,4 @@
 
-.button-details{
-  width: 180px;
-  text-align: center;
-  margin-left: 50px;
-  margin-top: 50px;
-  border-radius: 60px;
-  padding: 20px 32px 20px 32px;
-  background-color: var(--color-vert);
-  color: var(--color-beige);
-}
 
 .details{
   cursor: pointer;
@@ -18,9 +8,10 @@
 }
 
 .flex{
-  position: relative;
-  display: flex;
-  flex-direction: row;
+  display: block;
+  margin-top: 40px;
+  margin-left: 75px;
+  margin-right: 50px;
 }
 
 .table1{
@@ -34,7 +25,7 @@
   flex-direction: column;
   justify-content: left;
   max-width: 400px;
-  margin-left: 50px;
+  margin-left: 25px;
   margin-bottom: 100px;
   background-color: var(--color-vert);
   color: var(--color-beige);
@@ -51,18 +42,22 @@
   margin-bottom: 100px;
   background-color: var(--color-beige);
   color: var(--color-noir);
+
+  &--hidden{
+    display: none;
+  }
 }
 
 
 
 .cell{
   width: 200px;
-  height: 400px;
+  height: 250px;
   padding: 25px;
   border-bottom: solid 2px var(--color-rouille);
 
   &:last-child{
-    border-bottom: 0px;
+    border-bottom: none;
   }
 }
 
@@ -82,9 +77,13 @@
 
     background-color: var(--color-noir);
 
-    & button{
+    &__button{
+      margin-right: 30px;
+    }
+
+    & .container-table__button button{
       cursor: pointer;
-      max-height: 50px;
+        max-height: 50px;
         color: var(--color-blanc);
         border-color: var(--color-blanc);
         background-color: var(--color-noir);
@@ -92,11 +91,18 @@
         border-radius: 50px;
         padding: 10px 20px 10px 20px;
         margin-right: 20px;
+        margin-top: 20px;
 
         &.active-table{
           background-color: var(--color-vert);
           color: var(--color-blanc);
         }
+    }
+
+    &__button{
+      display: block;
+      margin-top: 25px;
+      margin-left: 25px;
     }
 
     &__flex{
@@ -113,15 +119,32 @@
 
 }
 
+.button-details{
+  max-height: 50px;
+    color: var(--color-blanc);
+    border-color: var(--color-blanc);
+    background-color: var(--color-noir);
+
+    border-radius: 50px;
+    padding: 10px 20px 10px 20px;
+    margin-right: 10px;
+    margin-top: 10px;
+
+  &.active-réponse{
+    background-color: var(--color-rouille);
+    color: var(--color-blanc);
+  }
+}
+
 @media (min-width: 600px){
   .cell{
     width: auto;
-    height: 300px;
+    height: 150px;
     padding: 25px;
     border-bottom: solid 2px var(--color-rouille);
   
     &:last-child{
-      border-bottom: 0px;
+      border-bottom: none;
     }
   }
 }
@@ -130,12 +153,12 @@
 @media (min-width: 1024px){
   .cell{
     width: auto;
-    height: 150px;
+    height: 200px;
     padding: 25px;
     border-bottom: solid 2px var(--color-rouille);
   
     &:last-child{
-      border-bottom: 0px;
+      border-bottom: none;
     }
   }
 }
