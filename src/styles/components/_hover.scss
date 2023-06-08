@@ -1,0 +1,106 @@
+@media (min-width: 1024px){
+
+    
+
+    .button:hover{
+        background-color: var(--color-vert);
+        color: var(--color-blanc);
+        border: solid var(--color-vert) 2px;
+    }
+
+    .button-hover:hover{
+        background-color: var(--color-rouille);
+        color: var(--color-blanc);
+        border: solid var(--color-rouille) 2px;
+    }
+
+    .button--vert:hover{
+        background-color: var(--color-rouille);
+        color: var(--color-blanc);
+        border: none;
+    }
+
+    .container-probleme:hover{
+        color: var(--color-rouille);
+    }
+
+    .container-probleme:hover::after{
+        background-color: var(--color-rouille);
+    }
+
+    .container-back:hover::before{
+        background-color: var(--color-rouille);
+    }
+
+
+    .circle:hover{
+        background-color: var(--color-rouille);
+    }
+    
+    .text-nav a::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0px;
+        left: 0;
+        background-color: var(--color-beige);
+        visibility: hidden;
+        transition: all 0.5s ease-in-out;
+    }
+    
+    .text-nav a:hover::before {
+        visibility: visible;
+        width: 100%;
+    }
+
+
+    @keyframes scale-up {
+        0% {
+            transform: scale(0);
+        }
+        100% {
+            transform: scale(10);
+        }
+    }
+    
+    @keyframes scale-down {
+        0% {
+            transform: scale(10);
+        }
+        100% {
+            transform: scale(0);
+        }
+    }
+
+    .cursor-thumb {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        background-image: url("../assets/images/emoji.png");
+        background-size: cover;
+        pointer-events: none;
+        display: none;
+        transform: scale(0);
+    }
+
+    .cursor-thumb.animate-in {
+        animation: scale-up 1s forwards;
+    }
+
+    .cursor-thumb.animate-out {
+        animation: scale-down 1s forwards;
+    }
+
+    .parent-animation-card{
+        perspective: 1000px;
+    }
+    .animation-card{
+        border-radius: 20px;
+        transform: rotateX(15deg) scale(0.9);
+        transition: all .5s ease;
+    }
+    .animation-card:hover{
+        transform: rotate(0deg) scale(1) translateY(0px);
+    }
+}

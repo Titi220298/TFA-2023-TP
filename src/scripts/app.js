@@ -511,3 +511,31 @@ window.onload = function () {
 };
 
 
+//emoji cursor
+
+const cursorElement = document.querySelector("#cursor");
+            const thumbElement = document.querySelector("#cursor-thumb");
+
+            cursorElement.addEventListener("mouseenter", function() {
+                thumbElement.classList.add("animate-in");
+                thumbElement.classList.remove("animate-out");
+                thumbElement.style.display = "block";
+            });
+
+            cursorElement.addEventListener("mouseleave", function() {
+                thumbElement.classList.remove("animate-in");
+                thumbElement.classList.add("animate-out");
+                setTimeout(() => {
+                    thumbElement.style.display = "none";
+                }, 200); // duration of the animation
+            });
+
+            document.addEventListener("mousemove", function(event) {
+                thumbElement.style.left = event.pageX + 'px';
+                thumbElement.style.top = event.pageY + 'px';
+});
+
+
+
+
+
