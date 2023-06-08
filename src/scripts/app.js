@@ -43,6 +43,22 @@ retour.addEventListener('click', () => {
   body.classList.remove('noscroll');
 });
 
+//guide d'entretien
+
+const guideb = document.querySelector("#guide");
+const retourguide = document.querySelector("#retour-guide");
+const guide = document.querySelector(".container-guide");
+
+guideb.addEventListener('click', () => {
+  guide.classList.remove("hidden");
+  body.classList.add('noscroll');
+});
+
+retourguide.addEventListener('click', () => {
+  guide.classList.add("hidden");
+  body.classList.remove('noscroll');
+});
+
 
 //observeur
 
@@ -355,5 +371,51 @@ if(darkTheme){
 
 
 
-//dragnabbit
+//table
+
+// Sélection des boutons
+let buttons = document.querySelectorAll('.container-table__flex button');
+
+// Sélection des éléments div contenant des questions et réponses
+let questions = document.querySelectorAll('.question .cell');
+let answers = document.querySelectorAll('.reponse-table .cell');
+
+// fonction pour nettoyer les classes
+function resetAll() {
+    buttons.forEach(button => {
+        button.classList.remove('active-table');
+    });
+
+    questions.forEach(question => {
+        question.classList.remove('hidden');
+    });
+
+    answers.forEach(answer => {
+        answer.classList.remove('hidden');
+    });
+}
+
+// fonction pour appliquer les classes
+function applyClasses(id) {
+    questions.forEach(question => {
+        if (!question.classList.contains(id)) {
+            question.classList.add('hidden');
+        }
+    });
+
+    answers.forEach(answer => {
+        if (!answer.classList.contains(id)) {
+            answer.classList.add('hidden');
+        }
+    });
+}
+
+// Ajout des écouteurs d'événements
+buttons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        resetAll();
+        e.target.classList.add('active-table');
+        applyClasses(e.target.id);
+    });
+});
 

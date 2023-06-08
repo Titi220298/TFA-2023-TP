@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DWMA project</title>
+  <title>Espace Artisanat</title>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -22,6 +22,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="assets/icons/site.webmanifest">
 
 </head>
 
@@ -68,7 +72,7 @@
 
 </nav>
 
-<body data-theme="ligth" class="">
+<body data-theme="ligth" class="noscroll">
   <section class="container-titre">
     <div class="container-titre__el">
       <h4 class="title title--4">Une solution pour les artisans créateurs pour répondre plusieurs problèmes ?</h4>
@@ -97,7 +101,7 @@
           utilisé certaines de mes questions pour 
           créer un sondage plus précis.</p>
 
-        <button class="button">Le guide d’entretien</button>
+        <button id="guide" class="button">Le guide d’entretien</button>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSfHAY7-i97LH0oJ4VsPl7dNhURD_nhy7T_cPnZkeWdsTYdxHw/viewform"><button class="button">Le sondage</button></a>
 
       </div>
@@ -138,10 +142,11 @@
     </div>
   </section>
 
-  <section class="container-guide">
+  <section class="container-guide hidden">
 
     <div class="container-guide__el">
       <div class="container__flex-lien">
+        <button id="retour-guide" class="button">retour</button>
         <h2 class="title title--2 title--vert">Guide d'entretien</h2>
       </div>
 
@@ -151,7 +156,7 @@
         <h3 class="title title--3 title--vert">Présentation</h3>
         <p>Bonjour, <br>je m’appelle Thibaut poucet je suis étudiant en 2eme à Haute école d’albert Jacquard de Namur, j’aimerais en apprendre plus sur votre métier/loisirs/passion, je vais vous poser quelques questions afin découvrir une problématique quelconque sur votre profil. Cette interview a pour but d’en savoir plus sur votre métier afin de développer un projet autour de vous. </p>
         <p>Soyez vous même il n’y a pas de mauvaise réponse ici, Je récolte votre avis et votre ressenti personnel.</p>
-        <h3 class="title title--3 title--vert">Présentation</h3>
+        <h3 class="title title--3 title--vert">Question large </h3>
         <p>Nous allons commencer à faire connaissance soyez naturelle et à l'aise.</p>
         <p>Quelle est votre passion/sujet aujourd’hui ?</p>
         <p>Expliquez-moi votre activité d'où elle à commencer ? *</p>
@@ -163,8 +168,37 @@
         <p>Pouvez-vous vous souvenir de 3 points de motivation lorsque vous vous êtes lancé ?</p>
         <p>Pourriez-vous me donner votre définition de l’artisanat ? *</p>
         <h4 class="title title--4 title--black">Comprendre le comportement</h4>
-        
-        <p></p>
+        <p>Combien de temps passez-vous sur votre activité ? *</p>
+        <p>Expliquez-moi vos sur les matériaux et les fournisseurs pour vos projets ?</p>
+        <p>Comment évaluez-vous et gérez-vous les opportunités de votre activité ?</p>
+        <h4 class="title title--4 title--black">Faire jaillir un problème – découvrir un besoin</h4>
+        <p>Quelle problématique rencontrez-vous dans votre activité ? *</p>
+        <p>Quels sont les défis les plus courants que vous rencontrez dans votre travail ?</p>
+        <p>Quel est votre plus grand blocage pour progresser dans votre métier ? *</p>
+        <p>Comment gérez-vous la gestion de votre temps et de votre planning ?</p>
+        <p>Quel est 3 points négatif dans votre métier/passion ? *</p>
+        <p>Votre dernière frustration à cause de activité c'était pour(quoi) ? *</p>
+        <p>Financièrement tout se passe bien ?  *</p>
+        <p>Que manque-t-il à la solution actuelle ? </p>
+        <h4 class="title title--4 title--black">Découvrir un obstacle ou frein</h4>
+        <p>Dans l’état actuel pensez être soutenus suffisamment par l’état, organisation etc ? *</p>
+        <p>Si vous deviez vendre en ligne (ou si vous le faites), quels seraient les points négatifs pour vous ? *</p>
+        <p>Vendre dans des magasins physiques est un avantage pour vous ? *</p>
+        <p>Vous rencontrez des problèmes dans la logistique et la livraison de vos produits ? *</p>
+        <h4 class="title title--4 title--black">Évaluer une possibilité/opportunité</h4>
+        <p>Quel est l’élément le plus important pour vous dans la vente de vos produits ? *</p>
+        <p>Lors de votre première vente ou mise en vente qu’es ce qu”il été compliqué ? *</p>
+        <h4 class="title title--4 title--black">Évaluer un produit/service</h4>
+        <p>Pensez-vous qu’il y a trop de e-commerce ? *</p>
+        <p>Pour vous c’est mieux de vendre ? * </p>
+        <p>- Local</p>
+        <p>- Fait main (artisanat)</p>
+        <p>- Ou les deux</p>
+        <h4 class="title title--4 title--black">Cibles</h4>
+        <p>Selon vous, qui va utiliser/acheter votre produit ou votre création ?</p>
+        <h4 class="title title--4 title--black">Dernière question</h4>
+        <p>Si vous aviez une baguette magique, quelle solution auriez-vous besoin maintenant ? *</p>
+        <p>Merci d’avoir répondu à mes questions, puis-je afficher votre nom dans le cadre de mon travail scolaire ? et souhaitez vous avoir des nouvelles de mon projet ?</p>
 
       </div>
 
@@ -270,11 +304,123 @@
     </div>
   </section>
 
+  <section class="container-table">
+    <div class="container-table__flex">
+      <button id="table-retour">retour</button>
+      <h3 class="title title--3">Tableau des réponse du sondage</h3>
+    </div>
+    <div class="container-table__flex">
+    <button id="tous" class="active-table">Tous</button>
+    <button id="economie">économie</button>
+    <button id="probleme">Problème</button>
+    <button id="ressentis">Ressentis</button>
+    <button id="vente">Vente</button>
+    <button id="solution">solution</button>
+    </div>
+
+    <div class="flex">
+    <button id="button-détails1" class="button-details">Réponse 1</button>
+    <button id="button-détails2" class="button-details">Réponse 2</button>
+    </div>
+    <div id="1" class="details">
+      <div class="table1">
+        <div class="question">
+          <div class="cell ressentis ">Expliquez-moi votre activité, d'où elle a commencé ?</div>
+          <div class="cell ressentis ">Qu'est-ce qui vous donne de l'énergie pour exercer votre activité ?</div>
+          <div class="cell ressentis ">Pourriez-vous me donner votre définition de l’artisanat ?</div>
+          <div class="cell ressentis ">Combien de temps passez-vous sur votre activité ?</div>
+          <div class="cell probleme ">Quelle problématique rencontrez-vous dans votre activité ?</div>
+          <div class="cell probleme ">Quels sont les obstacles qui vous empêchent de progresser dans votre métier ?</div>
+          <div class="cell probleme ">Y a-t-il des aspects négatifs de votre métier/passion qui vous pèsent ? Si oui, pouvez-vous en citer trois ?</div>
+          <div class="cell probleme ">Votre dernière frustration à cause de activité c'était pourquoi ?</div>
+          <div class="cell economie ">Financièrement tout se passe bien ?</div>
+          <div class="cell ressentis ">Dans l’état actuel, pensez être soutenus suffisamment par l’état, organisation, etc.. ?</div>
+          <div class="cell solution ">Quels canaux de communication utilisez-vous pour vous faire connaître en tant qu'artisan/créateur ?</div>
+          <div class="cell vente ">Si vous deviez vendre en ligne (ou si vous le faites), quels seraient les points négatifs pour vous ?</div>
+          <div class="cell economie ">Une location d'un espace physique pour un montant compris entre 50 et 200 euros par mois serait envisageable pour vous ?</div>
+          <div class="cell vente ">Vendre dans des magasins physiques est un avantage pour vous ?</div>
+          <div class="cell probleme ">Vous rencontrez des problèmes dans la logistique et la livraison de vos produits ? </div>
+          <div class="cell vente ">Quel est l’élément le plus important pour vous dans la vente de vos produits ?</div>
+          <div class="cell probleme ">Quelles difficultés avez-vous rencontrées lors de votre première vente ou mise en vente ?</div>
+          <div class="cell solution ">Pensez-vous qu’il y a trop de e-commerce ?</div>
+          <div class="cell solution ">Si vous aviez une baguette magique, quelle solution auriez-vous besoin maintenant ?</div>
+        </div>
+        <div class="reponse-table">
+          <div class="cell ressentis">Créations de déco et de souvenirs. J'ai commencé à faire pour moi, puis ma famille, puis mes amis. Et j'ai démarré mon entreprise quand leurs amis commençaient à me contacter.</div>
+          <div class="cell ressentis">Les encouragements et les retours de mes clients.</div>
+          <div class="cell ressentis"></div>
+          <div class="cell ressentis">Tous les jours</div>
+          <div class="cell probleme">La concurrence déloyale (Personnes non déclarées; qui utilisent illégalement la notoriété des licences; ou encore qui utilisent des matériaux de mauvaise qualité pour baisser leurs prix...)</div>
+          <div class="cell probleme">La communication entre les artisans</div>
+          <div class="cell probleme">Le temps que ça prend / Les charges / La solitude face à certains projets</div>
+          <div class="cell probleme">Je ne m'en rappelle plus... Peut-être lors de mon dernier marché d'artisans où l'on était mélangé avec des particuliers et des non-déclarés...</div>
+          <div class="cell economie">Ca se passe bien</div>
+          <div class="cell ressentis">Non</div>
+          <div class="cell solution">Réseau / Marché / Partenariat</div>
+          <div class="cell vente">Les frais</div>
+          <div class="cell economie">pas de réponse</div>
+          <div class="cell vente">Oui</div>
+          <div class="cell probleme">Non j'arrive à gérer</div>
+          <div class="cell vente">Un client satisfait</div>
+          <div class="cell probleme">Rien ou je ne m'en rappelle plus...</div>
+          <div class="cell solution">Oui</div>
+          <div class="cell solution">Un espace plus grand :D</div>
+        </div>
+      </div>
+    </div>
+    <div id="1" class="details hidden">
+      <div class="table1">
+        <div class="question">
+          <div class="cell ressentis ">Expliquez-moi votre activité, d'où elle a commencé ?</div>
+          <div class="cell ressentis ">Qu'est-ce qui vous donne de l'énergie pour exercer votre activité ?</div>
+          <div class="cell ressentis ">Pourriez-vous me donner votre définition de l’artisanat ?</div>
+          <div class="cell ressentis ">Combien de temps passez-vous sur votre activité ?</div>
+          <div class="cell probleme ">Quelle problématique rencontrez-vous dans votre activité ?</div>
+          <div class="cell probleme ">Quels sont les obstacles qui vous empêchent de progresser dans votre métier ?</div>
+          <div class="cell probleme ">Y a-t-il des aspects négatifs de votre métier/passion qui vous pèsent ? Si oui, pouvez-vous en citer trois ?</div>
+          <div class="cell probleme ">Votre dernière frustration à cause de activité c'était pourquoi ?</div>
+          <div class="cell economie ">Financièrement tout se passe bien ?</div>
+          <div class="cell ressentis ">Dans l’état actuel, pensez être soutenus suffisamment par l’état, organisation, etc.. ?</div>
+          <div class="cell solution ">Quels canaux de communication utilisez-vous pour vous faire connaître en tant qu'artisan/créateur ?</div>
+          <div class="cell vente ">Si vous deviez vendre en ligne (ou si vous le faites), quels seraient les points négatifs pour vous ?</div>
+          <div class="cell economie ">Une location d'un espace physique pour un montant compris entre 50 et 200 euros par mois serait envisageable pour vous ?</div>
+          <div class="cell vente ">Vendre dans des magasins physiques est un avantage pour vous ?</div>
+          <div class="cell probleme ">Vous rencontrez des problèmes dans la logistique et la livraison de vos produits ? </div>
+          <div class="cell vente ">Quel est l’élément le plus important pour vous dans la vente de vos produits ?</div>
+          <div class="cell probleme ">Quelles difficultés avez-vous rencontrées lors de votre première vente ou mise en vente ?</div>
+          <div class="cell solution ">Pensez-vous qu’il y a trop de e-commerce ?</div>
+          <div class="cell solution ">Si vous aviez une baguette magique, quelle solution auriez-vous besoin maintenant ?</div>
+        </div>
+        <div class="reponse-table">
+          <div class="cell ressentis">Créations de déco et de souvenirs. J'ai commencé à faire pour moi, puis ma famille, puis mes amis. Et j'ai démarré mon entreprise quand leurs amis commençaient à me contacter.</div>
+          <div class="cell ressentis">Les encouragements et les retours de mes clients.</div>
+          <div class="cell ressentis"></div>
+          <div class="cell ressentis">Tous les jours</div>
+          <div class="cell probleme">La concurrence déloyale (Personnes non déclarées; qui utilisent illégalement la notoriété des licences; ou encore qui utilisent des matériaux de mauvaise qualité pour baisser leurs prix...)</div>
+          <div class="cell probleme">La communication entre les artisans</div>
+          <div class="cell probleme">Le temps que ça prend / Les charges / La solitude face à certains projets</div>
+          <div class="cell probleme">Je ne m'en rappelle plus... Peut-être lors de mon dernier marché d'artisans où l'on était mélangé avec des particuliers et des non-déclarés...</div>
+          <div class="cell economie">Ca se passe bien</div>
+          <div class="cell ressentis">Non</div>
+          <div class="cell solution">Réseau / Marché / Partenariat</div>
+          <div class="cell vente">Les frais</div>
+          <div class="cell economie"></div>
+          <div class="cell vente">Oui</div>
+          <div class="cell probleme">Non j'arrive à gérer</div>
+          <div class="cell vente">Un client satisfait</div>
+          <div class="cell probleme">Rien ou je ne m'en rappelle plus...</div>
+          <div class="cell solution">Oui</div>
+          <div class="cell solution">Un espace plus grand :D</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="container container--white">
 
     <div class="container__flex-col">
       <h2 class="title title--2 title--vert">Découvrez tout les analyses détaillé du sondage</h2>
-      <button class="button button--vert">Analyses du sondage en un seul clic</button>
+      <a href="https://docs.google.com/document/d/11Wp5gCqNYCS2pfiwx_WFdWQT-llplczB9CtsZCQ8U_k/edit"><button class="button button--vert">Analyses du sondage en un seul clic</button></a>
     </div>  
 
     <div class="container__flex">
