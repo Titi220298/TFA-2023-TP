@@ -208,7 +208,7 @@
         margin-top: 15px;
         margin-bottom: 100px;
         padding: 0;
-        max-width: 70%;
+        max-width: 95%;
     }
 
     & span{
@@ -241,6 +241,7 @@
     max-width: 300px;
     min-width: 260px;
     max-height: 370px;
+    height: 370px;
 
     &::before{
         content: "X";
@@ -260,6 +261,7 @@
         background-color: var(--color-vert);
         border-radius: 0px 30px 0px 30px;
         font-size: 16px;
+
     }
 
     & p{
@@ -583,17 +585,26 @@
     padding-right: 20px;
     padding-bottom: 50px;
     background-color: var(--color-beige);
+    & li{
+
+        & a{
+            color: var(--color-vert);
+        }
+    }
 }
 
 .container__list-left{
     flex-direction: column;
     align-items: left;
     padding-top: 35px;
-    color: var(--color-noir);
     
     & li{
         padding-top: 15px;
         font-size: 20px;
+
+        & a{
+            color: var(--color-noir);
+        }
     }
 }
 

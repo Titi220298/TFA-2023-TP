@@ -12,7 +12,10 @@
 @import 'components/_div-guide-entretien';
 @import 'components/_tableau';
 /* Theme */
-
+html {
+    scroll-behavior: smooth;
+  }
+  
 
 a{
     text-decoration: none;

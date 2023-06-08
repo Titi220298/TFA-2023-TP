@@ -32,8 +32,19 @@ const body = document.querySelector("body");
 const inter = document.querySelector("#inter");
 const retour = document.querySelector("#retour-lien");
 const lien = document.querySelector(".container-inter-lien");
+const footerinter = document.querySelector("#footer-inter");
 
 inter.addEventListener('click', () => {
+  lien.classList.remove("hidden");
+  body.classList.add('noscroll');
+});
+
+retour.addEventListener('click', () => {
+  lien.classList.add("hidden");
+  body.classList.remove('noscroll');
+});
+
+footerinter.addEventListener('click', () => {
   lien.classList.remove("hidden");
   body.classList.add('noscroll');
 });
@@ -48,8 +59,19 @@ retour.addEventListener('click', () => {
 const guideb = document.querySelector("#guide");
 const retourguide = document.querySelector("#retour-guide");
 const guide = document.querySelector(".container-guide");
+const guidefooter = document.querySelector("#footer-guide");
 
 guideb.addEventListener('click', () => {
+  guide.classList.remove("hidden");
+  body.classList.add('noscroll');
+});
+
+retourguide.addEventListener('click', () => {
+  guide.classList.add("hidden");
+  body.classList.remove('noscroll');
+});
+
+guidefooter.addEventListener('click', () => {
   guide.classList.remove("hidden");
   body.classList.add('noscroll');
 });
@@ -64,6 +86,7 @@ retourguide.addEventListener('click', () => {
 const buttonsondage = document.querySelector("#sondage-button");
 const table = document.querySelector(".container-table");
 const retoursondage = document.querySelector("#table-retour");
+const footersondage = document.querySelector("#footer-sondage");
 
 buttonsondage.addEventListener('click', () => {
   table.classList.remove("hidden");
@@ -75,6 +98,15 @@ retoursondage.addEventListener('click', () => {
   body.classList.remove('noscroll');
 });
 
+footersondage.addEventListener('click', () => {
+  table.classList.remove("hidden");
+  body.classList.add('noscroll');
+});
+
+retoursondage.addEventListener('click', () => {
+  table.classList.add("hidden");
+  body.classList.remove('noscroll');
+});
 
 //observeur
 
