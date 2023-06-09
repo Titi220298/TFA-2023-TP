@@ -28,6 +28,14 @@
     }
 }
 
+.container__flex-col{
+    text-align: center;
+}
+
+.container-center{
+    text-align: center;
+}
+
 .container__el{
     margin: 0px 25px 0px 25px;
 
@@ -329,6 +337,10 @@
         
         &--marge img{
             margin-bottom: 0;
+        }
+
+        & :nth-child(2){
+            max-width: 376px;
         }
 
         & img{
