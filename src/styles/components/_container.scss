@@ -151,7 +151,10 @@
         background-size: cover;
 
         background-color: var(--color-beige);
+
+        color: var(--color-noir);
     }
+
 
 }
 
@@ -632,6 +635,7 @@
 
 .credit-d{
     display: none;
+    color: var(--color-noir);
 }
 
 .container__list-right{
@@ -646,6 +650,14 @@
         padding-top: 15px;
         font-size: 20px;
     }
+}
+
+#UI{
+    cursor: pointer;
+}
+
+#credit{
+    cursor: pointer;
 }
 
 @media (min-width: 1110px){

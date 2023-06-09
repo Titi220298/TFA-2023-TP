@@ -1,0 +1,134 @@
+
+
+.container-UI{
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    box-shadow: 0px -400px 0px 0px rgba(0, 0, 0, 0.816);
+
+    position: fixed;
+    top : 80px;
+
+    z-index: 10;
+
+    background-color: var(--color-blanc);
+    width: 100vw;
+    max-height: 100vh;
+
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-bottom: 100px;
+    padding-top: 19px;
+
+    & button{
+        color: var(--color-vert);
+        border-color: var(--color-vert);
+
+        margin-right: 20px;
+    }
+
+    & H2{
+        margin-top: 31px;
+    }
+
+
+    &__el{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        & p{
+            color: var(--color-noir);
+        }
+
+        & h3{
+            padding-top: 50px;
+        }
+
+        & h4{
+            padding-top: 40px;
+        }
+
+    }
+
+    .container-UI__flex-row{
+        display: flex;
+        flex-direction: row;
+        margin-top: 25px;
+    }
+
+    .box-vert{
+        padding: 10px;
+        width: 120px;
+        height: 120px;
+        background-color: var(--color-vert);
+        color: var(--color-beige);
+
+    }
+    .box-beige{
+        padding: 10px;
+        width: 120px;
+        height: 120px;
+        background-color: var(--color-beige);
+        color: var(--color-vert);
+
+    }
+
+    .box-rouille{
+        padding: 10px;
+        width: 120px;
+        height: 120px;
+        background-color: var(--color-rouille);
+        color: var(--color-beige);
+        
+    }
+}
+
+@media (min-width: 600px){
+
+    .container-UI__flex{
+        display: block;
+
+        & h2{
+            font-size: 50px;
+        }
+    }
+
+    .container-UI{
+        padding-right: 50px;
+        padding-left: 50px;
+
+        &__el{
+            & p{
+                color: var(--color-noir);
+                 width: 550px;
+            }
+
+            & h4{
+                width: 500px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px){
+    
+    .container-UI{
+        padding-right: 100px;
+        padding-left: 100px;
+
+        &__el{
+            & p{
+                color: var(--color-noir);
+                 width: 750px;
+            }
+            & h3{
+                padding-top: 50px;
+            }
+            & h4{
+                width: 800px;
+            }
+        }
+    }
+}

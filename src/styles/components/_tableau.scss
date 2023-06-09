@@ -130,6 +130,7 @@
     margin-right: 10px;
     margin-top: 10px;
 
+    cursor: pointer;
   &.active-réponse{
     background-color: var(--color-rouille);
     color: var(--color-blanc);
@@ -160,5 +161,16 @@
     &:last-child{
       border-bottom: none;
     }
+  }
+
+  .button-details:hover{
+    color: var(--color-beige);
+    background-color: var(--color-rouille);
+  }
+  
+
+  .container-table__button button:hover{
+    color: var(--color-beige);
+    background-color: var(--color-vert);
   }
 }

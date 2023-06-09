@@ -26,6 +26,8 @@ croix.addEventListener('click', () => {
   list.classList.add('hidden-nav');
 });
 
+
+
 //interview lien
 
 const body = document.querySelector("body");
@@ -107,6 +109,37 @@ retoursondage.addEventListener('click', () => {
   table.classList.add("hidden");
   body.classList.remove('noscroll');
 });
+
+//credit
+
+const buttoncredit = document.querySelector("#credit");
+const credit = document.querySelector(".container-credit");
+const retourcredit = document.querySelector("#retour-credit");
+
+buttoncredit.addEventListener('click', () => {
+  credit.classList.remove("hidden");
+  body.classList.add('noscroll');
+});
+
+retourcredit.addEventListener('click', () => {
+  credit.classList.add("hidden");
+  body.classList.remove('noscroll');
+});
+
+const buttonUI = document.querySelector("#UI");
+const UI = document.querySelector(".container-UI");
+const retourUI = document.querySelector("#retour-UI");
+
+buttonUI.addEventListener('click', () => {
+  UI.classList.remove("hidden");
+  body.classList.add('noscroll');
+});
+
+retourUI.addEventListener('click', () => {
+  UI.classList.add("hidden");
+  body.classList.remove('noscroll');
+});
+
 
 //observeur
 
